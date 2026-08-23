@@ -2,12 +2,13 @@
    DATA
    ============================================================ */
 const UX = [
-  {t:"TinyTots Hub: AI-Powered Daycare Intelligence",year:"2024",sub:"",tags:["Toddlers Growth","AI","Dashboard"],img:"assets/images/img21.jpg"},
-  {t:"Saral Pay: A voice-first digital payment companion",year:"2026",sub:"IIT Delhi Capstone Project • FinTech & Financial Inclusion",case:"#case-saathi",tags:["Digital Payments","AI Companion","Dashboard"],img:"assets/images/img22.jpg"},
-  {t:"StreetEats: An app connecting people with food hawkers",sub:"SDG 9 · Connecting hawkers & customers",case:"#case-streeteats",tags:["Location","Discovery","Mobile App"],img:"assets/images/img23.jpg"},
-  {t:"Design System for an internal Adobe dashboard",sub:"Design Systems · Figma · Under NDA",case:"#case-designsystem",tags:["Design System","Components","Figma"],img:"assets/images/img24.jpg"},
-  {t:"NAVITRAX: A fleet management platform",sub:"Fleet management · Product UX",case:"#case-fleet",tags:["Fleet Management","Dashboard","Product UX"],img:"assets/images/img25.jpg"},
-  {t:"Safar Sathi: A transit companion for elderly bus journeys",sub:"SDG 9 · Accessibility · AI-driven mobile app",case:"#case-safar",tags:["Accessibility","Public Transit","Mobile App"],img:"assets/images/img26.jpg"},
+  {t:"TinyTots Hub: AI-Powered Daycare Intelligence",year:"2024",sub:"",tags:["Toddlers Growth","AI","Dashboard"],img:"assets/img-02.jpg"},
+  {t:"Saral Pay: A voice-first digital payment companion",year:"2026",sub:"IIT Delhi Capstone Project • FinTech & Financial Inclusion",case:"#case-saathi",tags:["Digital Payments","AI Companion","Dashboard"],img:"assets/img-03.jpg"},
+  {t:"StreetEats: An app connecting people with food hawkers",sub:"SDG 9 · Connecting hawkers & customers",case:"#case-streeteats",tags:["Location","Discovery","Mobile App"],img:"assets/img-08.jpg"},
+  {t:"Design System for an internal Adobe dashboard",sub:"Design Systems · Figma · Under NDA",case:"#case-designsystem",tags:["Design System","Components","Figma"],img:"assets/img-16.jpg"},
+  {t:"NAVITRAX: A fleet management platform",sub:"Fleet management · Product UX",case:"#case-fleet",tags:["Fleet Management","Dashboard","Product UX"],img:"assets/img-17.jpg"},
+  {t:"Safar Sathi: A transit companion for elderly bus journeys",sub:"SDG 9 · Accessibility · AI-driven mobile app",case:"#case-safar",tags:["Accessibility","Public Transit","Mobile App"],img:"assets/img-24.jpg"},
+  {t:"AI Sales Assistant: an internal chatbot for Adobe's sales team",sub:"AI · Enterprise UX · Under NDA",case:"#case-salesai",tags:["AI","Enterprise","Chatbot"],img:"assets/img-25.jpg"},
 ];
 const VISUAL = [
   {t:"Brand identity system",role:"Visual Designer",dur:"6 weeks",ind:"Branding",
@@ -20,15 +21,15 @@ const VISUAL = [
    d:"A bold, typographic poster series for a local design meetup.",tags:["Poster","Typography","Print"],team:false},
 ];
 const ART = [
-  {t:"Beneath the waves",img:"assets/images/img27.jpg"},
-  {t:"Eye on you!",img:"assets/images/img28.jpg"},
-  {t:"Midnight moonlight",img:"assets/images/img29.jpg"},
-  {t:"The Yellow Umbrella",img:"assets/images/img30.jpg"},
-  {t:"12 AM! Next Episode?",img:"assets/images/img31.jpg"},
-  {t:"ये रे ये रे पावसा, तुला देते पैसा!",img:"assets/images/img32.jpg"},
-  {t:"One Afternoon",img:"assets/images/img33.jpg"},
-  {t:"It's more about the journey than the experience.",img:"assets/images/img34.jpg"},
-  {t:"Ambling along the streets",img:"assets/images/img35.jpg"},
+  {t:"Beneath the waves",img:"assets/img-26.jpg"},
+  {t:"Eye on you!",img:"assets/img-27.jpg"},
+  {t:"Midnight moonlight",img:"assets/img-28.jpg"},
+  {t:"The Yellow Umbrella",img:"assets/img-29.jpg"},
+  {t:"12 AM! Next Episode?",img:"assets/img-30.jpg"},
+  {t:"ये रे ये रे पावसा, तुला देते पैसा!",img:"assets/img-31.jpg"},
+  {t:"One Afternoon",img:"assets/img-32.jpg"},
+  {t:"It's more about the journey than the experience.",img:"assets/img-33.jpg"},
+  {t:"Ambling along the streets",img:"assets/img-34.jpg"},
 ];
 
 const TOOLS = [
@@ -76,19 +77,19 @@ function artCard(a){
   </figure>`;
 }
 
-document.getElementById('featuredGrid').innerHTML = [UX[0],UX[1],UX[3]].map(projCard).join('');
-document.getElementById('uxGrid').innerHTML = [UX[0],UX[1],UX[4],UX[3],UX[2],UX[5]].map(projCard).join('');
+document.getElementById('featuredGrid').innerHTML = [UX[0],UX[6],UX[1]].map(projCard).join('');
+document.getElementById('uxGrid').innerHTML = [UX[0],UX[6],UX[1],UX[4],UX[3],UX[2],UX[5]].map(projCard).join('');
 
 document.getElementById('artGrid').innerHTML = ART.map(artCard).join('');
 document.getElementById('toolsGrid').innerHTML = TOOLS.map(([a,n,c])=>
   `<div class="tool card reveal"><div class="tico">${a}</div><div class="tn">${n}</div><div class="tc">${c}</div></div>`).join('');
-{const _sw=document.getElementById('skillsWrap'); if(_sw) _sw.innerHTML = SKILLS.map(s=>`<span class="chip">${s}</span>`).join('');}
+{const _sw=document.getElementById('skillsWrap'); if(_sw){ const cl=['sc-a','sc-b','sc-c','sc-d','sc-e']; const big=[0,4,7,10]; _sw.innerHTML = SKILLS.map((s,i)=>`<span class="sc-pill ${cl[i%cl.length]}${big.includes(i)?' sc-big':''}" style="--r:${(i*41)%7-3}deg">${s}</span>`).join(''); }}
 document.getElementById('year').textContent = new Date().getFullYear();
 
 /* ============================================================
    ROUTER  (hash-based, single-page)
    ============================================================ */
-const PAGES = {home:'page-home',about:'page-about',projects:'page-projects',work:'page-projects',case:'page-case','case-saathi':'page-case-saathipay','case-streeteats':'page-case-streeteats','case-designsystem':'page-case-designsystem','case-fleet':'page-case-fleet','case-safar':'page-case-safar','contact-anchor':'page-home'};
+const PAGES = {home:'page-home',about:'page-about',projects:'page-projects',work:'page-projects',case:'page-case','case-saathi':'page-case-saathipay','case-streeteats':'page-case-streeteats','case-designsystem':'page-case-designsystem','case-fleet':'page-case-fleet','case-safar':'page-case-safar','case-salesai':'page-case-salesai','contact-anchor':'page-home'};
 function route(hash){
   let key = (hash||'#home').replace('#','');
   let scrollTarget = null;
@@ -100,7 +101,7 @@ function route(hash){
   // active nav state
   document.querySelectorAll('.nav-links a').forEach(a=>{
     const h=a.getAttribute('href').replace('#','');
-    a.classList.toggle('active', h===key || (['case','case-saathi','case-streeteats','case-designsystem','case-fleet','case-safar','projects'].includes(key)&&h==='work'));
+    a.classList.toggle('active', h===key || (['case','case-saathi','case-streeteats','case-designsystem','case-fleet','case-safar','case-salesai','projects'].includes(key)&&h==='work'));
   });
   window.scrollTo({top:0,behavior:'instant' in window?'instant':'auto'});
   observeReveals();
@@ -176,13 +177,25 @@ function observeReveals(){
 const nav = document.getElementById('nav');
 const blobs = document.querySelectorAll('.blob');
 const heroBg = document.getElementById('heroBg');
+const covers = document.querySelectorAll('.cs-cover img');
+const reduceMotion = matchMedia('(prefers-reduced-motion:reduce)').matches;
 function onScroll(){
   nav.classList.toggle('scrolled', window.scrollY>10);
   const y = window.scrollY;
-  blobs.forEach(b=>{ const d=parseFloat(b.dataset.depth||.3); b.style.transform=`translateY(${y*d*0.25}px)`; });
   if(heroBg){ heroBg.style.opacity = Math.max(0, 1 - y/620); }
+  if(reduceMotion) return;
+  blobs.forEach(b=>{ const d=parseFloat(b.dataset.depth||.3); b.style.transform=`translateY(${y*d*0.25}px)`; });
+  if(heroBg){ heroBg.style.transform=`translate3d(0, ${y*0.18}px, 0)`; }
+  const vh = window.innerHeight;
+  covers.forEach(img=>{
+    if(!img.offsetParent) return;
+    const r = img.getBoundingClientRect();
+    const off = Math.max(-26, Math.min(26, (r.top + r.height/2 - vh/2) * -0.05));
+    img.style.transform = `scale(1.12) translate3d(0, ${off}px, 0)`;
+  });
 }
-window.addEventListener('scroll',onScroll,{passive:true});
+let _pTick=false;
+window.addEventListener('scroll',()=>{ if(!_pTick){ requestAnimationFrame(()=>{ onScroll(); _pTick=false; }); _pTick=true; } },{passive:true});
 
 /* ============================================================
    MOBILE MENU
@@ -221,7 +234,12 @@ form.addEventListener('submit',e=>{
   setErr(email,!emailOk); if(!emailOk)ok=false;
   setErr(msg,!msg.value.trim()); if(!msg.value.trim())ok=false;
   const note=document.getElementById('formNote');
-  if(ok){ note.classList.add('show'); form.querySelector('button').textContent='Message ready ✓'; }
+  if(ok){
+    const subject=encodeURIComponent('Portfolio enquiry from '+name.value.trim());
+    const body=encodeURIComponent(msg.value.trim()+'\n\n— '+name.value.trim()+' ('+email.value.trim()+')');
+    window.location.href='mailto:sara24work@gmail.com?subject='+subject+'&body='+body;
+    note.classList.add('show'); form.querySelector('button').textContent='Opening your email app…';
+  }
   else{ note.classList.remove('show'); }
 });
 form.querySelectorAll('input,textarea').forEach(inp=>
