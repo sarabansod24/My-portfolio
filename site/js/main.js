@@ -2,13 +2,13 @@
    DATA
    ============================================================ */
 const UX = [
-  {t:"TinyTots Hub: AI-Powered Daycare Intelligence",year:"2024",sub:"",tags:["Toddlers Growth","AI","Dashboard"],img:"assets/img-02.jpg"},
-  {t:"Saral Pay: A voice-first digital payment companion",year:"2026",sub:"IIT Delhi Capstone Project • FinTech & Financial Inclusion",case:"#case-saathi",tags:["Digital Payments","AI Companion","Dashboard"],img:"assets/img-03.jpg"},
-  {t:"StreetEats: An app connecting people with food hawkers",sub:"SDG 9 · Connecting hawkers & customers",case:"#case-streeteats",tags:["Location","Discovery","Mobile App"],img:"assets/img-08.jpg"},
-  {t:"Design System for an internal Adobe dashboard",sub:"Design Systems · Figma · Under NDA",case:"#case-designsystem",tags:["Design System","Components","Figma"],img:"assets/img-16.jpg"},
-  {t:"NAVITRAX: A fleet management platform",sub:"Fleet management · Product UX",case:"#case-fleet",tags:["Fleet Management","Dashboard","Product UX"],img:"assets/img-17.jpg"},
-  {t:"Safar Sathi: A transit companion for elderly bus journeys",sub:"SDG 9 · Accessibility · AI-driven mobile app",case:"#case-safar",tags:["Accessibility","Public Transit","Mobile App"],img:"assets/img-24.jpg"},
-  {t:"AI Sales Assistant: an internal chatbot for Adobe's sales team",sub:"AI · Enterprise UX · Under NDA",case:"#case-salesai",tags:["AI","Enterprise","Chatbot"],img:"assets/img-25.jpg"},
+  {t:"TinyTots Hub: AI-Powered Daycare Intelligence",year:"2024",sub:"",tags:["Toddlers Growth","AI","Dashboard"],img:"assets/images/tinytots-hub-cover-image.jpg"},
+  {t:"Saral Pay: A voice-first digital payment companion",year:"2026",sub:"IIT Delhi Capstone Project • FinTech & Financial Inclusion",case:"#case-saathi",tags:["Digital Payments","AI Companion","Dashboard"],img:"assets/images/saral-pay-cover.jpg"},
+  {t:"StreetEats: An app connecting people with food hawkers",sub:"SDG 9 · Connecting hawkers & customers",case:"#case-streeteats",tags:["Location","Discovery","Mobile App"],img:"assets/images/streeteats-cover-illustration.jpg"},
+  {t:"Design System for an internal Adobe dashboard",sub:"Design Systems · Figma · Under NDA",case:"#case-designsystem",tags:["Design System","Components","Figma"],img:"assets/images/design-system-cover.jpg"},
+  {t:"NAVITRAX: A fleet management platform",sub:"Fleet management · Product UX",case:"#case-fleet",tags:["Fleet Management","Dashboard","Product UX"],img:"assets/images/navitrax-cover.jpg"},
+  {t:"Safar Sathi: A transit companion for elderly bus journeys",sub:"SDG 9 · Accessibility · AI-driven mobile app",case:"#case-safar",tags:["Accessibility","Public Transit","Mobile App"],img:"assets/images/safar-sathi-cover.jpg"},
+  {t:"AI Sales Assistant: an internal chatbot for Adobe's sales team",sub:"AI · Enterprise UX · Under NDA",case:"#case-salesai",tags:["AI","Enterprise","Chatbot"],img:"assets/images/ai-sales-assistant-cover.jpg"},
 ];
 const VISUAL = [
   {t:"Brand identity system",role:"Visual Designer",dur:"6 weeks",ind:"Branding",
@@ -21,15 +21,15 @@ const VISUAL = [
    d:"A bold, typographic poster series for a local design meetup.",tags:["Poster","Typography","Print"],team:false},
 ];
 const ART = [
-  {t:"Beneath the waves",img:"assets/img-26.jpg"},
-  {t:"Eye on you!",img:"assets/img-27.jpg"},
-  {t:"Midnight moonlight",img:"assets/img-28.jpg"},
-  {t:"The Yellow Umbrella",img:"assets/img-29.jpg"},
-  {t:"12 AM! Next Episode?",img:"assets/img-30.jpg"},
-  {t:"ये रे ये रे पावसा, तुला देते पैसा!",img:"assets/img-31.jpg"},
-  {t:"One Afternoon",img:"assets/img-32.jpg"},
-  {t:"It's more about the journey than the experience.",img:"assets/img-33.jpg"},
-  {t:"Ambling along the streets",img:"assets/img-34.jpg"},
+  {t:"Beneath the waves",img:"assets/images/art-beneath-the-waves.jpg"},
+  {t:"Eye on you!",img:"assets/images/art-eye-on-you.jpg"},
+  {t:"Midnight moonlight",img:"assets/images/art-midnight-moonlight.jpg"},
+  {t:"The Yellow Umbrella",img:"assets/images/art-the-yellow-umbrella.jpg"},
+  {t:"12 AM! Next Episode?",img:"assets/images/art-12am-next-episode.jpg"},
+  {t:"ये रे ये रे पावसा, तुला देते पैसा!",img:"assets/images/art-ye-re-ye-re-pavsa.jpg"},
+  {t:"One Afternoon",img:"assets/images/art-one-afternoon.jpg"},
+  {t:"It's more about the journey than the experience.",img:"assets/images/art-journey-over-experience.jpg"},
+  {t:"Ambling along the streets",img:"assets/images/art-ambling-along-the-streets.jpg"},
 ];
 
 const TOOLS = [
@@ -177,7 +177,7 @@ function observeReveals(){
 const nav = document.getElementById('nav');
 const blobs = document.querySelectorAll('.blob');
 const heroBg = document.getElementById('heroBg');
-const covers = document.querySelectorAll('.cs-cover img');
+const covers = document.querySelectorAll('.cs-cover img:not([data-no-parallax])');
 const reduceMotion = matchMedia('(prefers-reduced-motion:reduce)').matches;
 function onScroll(){
   nav.classList.toggle('scrolled', window.scrollY>10);
@@ -191,7 +191,8 @@ function onScroll(){
     if(!img.offsetParent) return;
     const r = img.getBoundingClientRect();
     const off = Math.max(-26, Math.min(26, (r.top + r.height/2 - vh/2) * -0.05));
-    img.style.transform = `scale(1.12) translate3d(0, ${off}px, 0)`;
+    const sc = img.dataset.coverScale || 1.12;
+    img.style.transform = `scale(${sc}) translate3d(0, ${off}px, 0)`;
   });
 }
 let _pTick=false;

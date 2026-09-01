@@ -217,8 +217,8 @@ body::before{
 .saral-screen-block{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-md);padding:18px}
 .saral-screen-block h3{font-family:var(--font-display);font-size:15px;margin:0 0 6px}
 .saral-screen-block p{margin:0 0 12px;font-size:13.5px;line-height:1.5}
-.saral-ph{width:254px;height:549px;max-width:100%;aspect-ratio:390/844;border-radius:var(--r-sm);margin:0 auto}
-.saral-ph img{width:100%;height:100%;object-fit:cover;border-radius:var(--r-sm);display:block;border:1px solid var(--border);box-shadow:0 1px 3px rgba(34,32,29,.08)}
+.saral-ph{width:254px;height:549px;max-width:100%;aspect-ratio:390/844;border-radius:var(--r-sm);margin:0 auto;border:1px solid var(--border);overflow:hidden}
+.saral-ph img{width:100%;height:100%;object-fit:cover;display:block}
 @media (max-width:860px){
   .saral-screens-grid{grid-template-columns:1fr}
   .saral-ph{margin-inline:auto}
@@ -480,6 +480,9 @@ body::before{
 /* SaralPay cover photo is closer to 3:2 — the default 21:9 crop cut off the couple. Give it a taller box + centered focal point so the full moment reads. */
 .cs-cover-tall{aspect-ratio:16/10}
 .cs-cover-tall img{object-position:center 32%}
+/* Adobe AI assistant cover is a 3:2 product photo — 21:9 cut into the screen itself. */
+.cs-cover-photo{aspect-ratio:16/9}
+.cs-cover-photo img{width:100%;height:100%;object-fit:cover;object-position:center 48%}
 .cs-meta{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:36px;background:var(--border);border:1px solid var(--border);border-radius:var(--r-md);overflow:hidden}
 .cs-meta .m{background:var(--bg);padding:20px 22px}
 .cs-meta .m .k{font-size:12.5px;color:var(--text-2);letter-spacing:.03em;margin-bottom:6px}
@@ -1210,3 +1213,102 @@ i.ia2-l0{background:var(--primary)} i.ia2-l1{background:var(--primary-ink)} i.ia
 #page-case-salesai .hifi-stack .f2{transform:translate(-50%,-46%);z-index:3}
 #page-case-salesai .hifi-stack .f3{transform:translate(calc(-50% + 130px),-38%) rotate(4deg) scale(.9);z-index:2}
 @media(max-width:760px){#page-case-salesai .hifi-stack{height:auto;display:flex;flex-direction:column;align-items:center;gap:18px;max-width:100%}#page-case-salesai .hifi-stack .frame{position:static;transform:none!important;width:100%;max-width:460px}}
+
+/* Hi-fi pair shown as flat screens — mockup chrome competed with the UI, which is the actual work. */
+.hifi{margin:32px 0 0}
+.hifi-frames{display:grid;gap:20px}
+.hifi-frames img{width:100%;height:auto;border-radius:10px;display:block;
+  box-shadow:0 1px 2px rgba(34,32,29,.07), 0 14px 30px -14px rgba(34,32,29,.22)}
+.hifi figcaption{margin-top:16px;font-size:13px;color:var(--text-2)}
+@media(min-width:761px){
+  .hifi-frames{grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+  .hifi-frames img{border:1px solid var(--border)}
+  .hifi-frames img:first-child{transform:translateY(-16px)}
+  .hifi-frames img:last-child{transform:translateY(16px)}
+}
+/* AI Sales Assistant: clear separators between subsections so dense content doesn't run together */
+#page-case-salesai .cs-section > .dsub{margin-top:52px;padding-top:30px;border-top:1px solid var(--border)}
+#page-case-salesai .cs-cover-photo{aspect-ratio:1600/1066;background:#E8DED5}
+#page-case-salesai .cs-cover-photo img{object-fit:contain;transform:none!important}
+/* response-flow (replaces the template card grid) */
+.rflow{display:flex;align-items:stretch;gap:0;margin-top:20px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);box-shadow:0 16px 36px -20px rgba(34,32,29,.30);padding:26px}
+.rflow .rf-step{flex:1;text-align:center;padding:0 14px;display:flex;flex-direction:column;align-items:center}
+.rflow .rf-ico{width:52px;height:52px;border-radius:50%;background:var(--hover);color:var(--primary-ink);display:grid;place-items:center;margin-bottom:14px}
+.rflow .rf-ico svg{width:24px;height:24px}
+.rflow .rf-step h5{font-family:var(--font-display);font-size:14.5px;margin:0 0 6px}
+.rflow .rf-step p{font-size:12.5px;color:var(--text-2);line-height:1.5;margin:0;max-width:26ch}
+.rflow .rf-arrow{flex:0 0 auto;align-self:center;color:var(--secondary);font-size:22px;font-weight:700;padding:0 4px}
+@media(max-width:760px){
+  .rflow{flex-direction:column;gap:20px;padding:20px}
+  .rflow .rf-arrow{transform:rotate(90deg)}
+}
+
+/* ---- AI Sales Assistant · response system, component mapping, conversation ---- */
+/* Reuses the case-study surfaces, radii and mind-map chip tints already defined above. */
+.artefacts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px;list-style:none}
+.artefacts .a{padding:24px;background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-md)}
+.artefacts .a .num{display:block;font-family:var(--font-display);font-weight:700;font-size:12.5px;letter-spacing:.08em;color:var(--secondary);margin-bottom:14px}
+.artefacts .a h4{font-size:16.5px;line-height:1.25;margin-bottom:9px}
+.artefacts .a p{font-size:14px;line-height:1.6;color:var(--text-2);margin:0}
+
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:22px 0 6px;list-style:none}
+.chain li{display:flex;align-items:center;gap:12px}
+.chain li b{font-family:var(--font-display);font-weight:600;font-size:12.5px;color:var(--primary-ink);background:var(--hover);padding:9px 15px;border-radius:var(--r-pill);white-space:nowrap}
+.chain li::after{content:"";width:20px;height:2px;background:var(--border);border-radius:2px;flex:none}
+.chain li:last-child::after{display:none}
+
+.tpl-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:20px}
+.tpl{border:1px solid var(--border);border-radius:var(--r-sm);overflow:hidden;background:#fff}
+.tpl svg{width:100%;display:block}
+.tpl .cap{padding:12px 14px 14px;border-top:1px solid var(--border);background:var(--surface-2)}
+.tpl .cap b{display:block;font-family:var(--font-display);font-size:13px;margin-bottom:4px}
+.tpl .cap span{display:block;font-size:11.5px;color:var(--text-2);line-height:1.5}
+
+.aimap{margin-top:22px;border:1px solid var(--border);border-radius:var(--r-md);overflow:hidden}
+.aimap .hd,.aimap .row{display:grid;grid-template-columns:1fr 1.1fr 1.5fr;gap:18px;padding:15px 20px;align-items:center}
+.aimap .hd{background:var(--surface);font-family:var(--font-display);font-weight:700;font-size:11px;letter-spacing:.08em;color:var(--text-2)}
+.aimap .row{border-top:1px solid var(--border);background:var(--surface-2)}
+.aimap .row .q{font-family:var(--font-display);font-weight:600;font-size:14px;line-height:1.35}
+.aimap .row .lg{font-size:12.5px;color:var(--text-2);line-height:1.5}
+.aimap .cmp{display:flex;flex-wrap:wrap;gap:6px}
+.aimap .cmp span{font-family:var(--font-display);font-weight:600;font-size:11px;padding:5px 10px;border-radius:var(--r-pill);color:#3a3730;line-height:1.2}
+.aimap .row:nth-child(2) .cmp span{background:#E1EAF2}
+.aimap .row:nth-child(3) .cmp span{background:#E7ECDD}
+.aimap .row:nth-child(4) .cmp span{background:#EDE4F2}
+.aimap .row:nth-child(5) .cmp span{background:#F5E9DA}
+
+.inv{display:flex;flex-wrap:wrap;gap:11px;margin-top:14px;list-style:none}
+.inv li{font-family:var(--font-display);font-weight:700;font-size:14.5px;padding:11px 20px;border-radius:var(--r-pill);background:var(--surface-2);border:1.5px solid var(--secondary);color:var(--text);box-shadow:0 3px 8px -3px rgba(34,32,29,.18)}
+.map-note{font-size:13.5px!important;color:var(--text-2);margin-top:14px!important}
+
+.convo{display:grid;grid-template-columns:repeat(6,1fr);margin-top:24px}
+.convo .t{position:relative;padding:0 5px;text-align:center}
+.convo .t::before{content:"";position:absolute;top:15px;right:50%;width:100%;height:2px;background:var(--border);z-index:0}
+.convo .t:first-child::before{display:none}
+.convo .who{position:relative;z-index:1;display:inline-block;font-family:var(--font-display);font-weight:700;font-size:10px;letter-spacing:.07em;padding:6px 12px;border-radius:var(--r-pill);margin-bottom:13px}
+.convo .t.user .who{background:var(--hover);color:var(--primary-ink)}
+.convo .t.ai .who{background:var(--primary);color:#fff}
+.convo .lb{font-family:var(--font-display);font-weight:600;font-size:12.5px;line-height:1.3;color:var(--text)}
+.convo .sub{display:block;font-family:var(--font-body);font-weight:400;font-size:11.5px;color:var(--text-2);margin-top:6px;line-height:1.45}
+
+.handoff{margin-top:var(--s5);padding:32px 34px;border-radius:var(--r-lg);background:var(--surface);border:1px solid var(--border)}
+.handoff h3{font-size:21px;margin:12px 0 10px}
+.handoff p{font-size:15.5px;line-height:1.7;margin:0}
+.handoff .chain{margin-bottom:0}
+
+@media(max-width:900px){
+  .aimap .hd,.aimap .row{grid-template-columns:1fr 1fr 1.3fr;gap:14px;padding:14px 16px}
+  .tpl-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:760px){
+  .artefacts{grid-template-columns:1fr}
+  .aimap .hd{display:none}
+  .aimap .row{grid-template-columns:1fr;gap:10px}
+  .aimap .row>*[data-l]::before{content:attr(data-l);display:block;font-family:var(--font-display);font-weight:700;font-size:10px;letter-spacing:.08em;color:var(--text-2);margin-bottom:6px}
+  .handoff{padding:26px 22px}
+  .convo{grid-template-columns:1fr}
+  .convo .t{display:grid;grid-template-columns:74px 1fr;gap:16px;align-items:center;text-align:left;padding:7px 0}
+  .convo .t::before{top:0;bottom:0;left:36px;right:auto;width:2px;height:100%}
+  .convo .t:first-child::before{display:block}
+  .convo .who{margin:0;justify-self:center}
+}
