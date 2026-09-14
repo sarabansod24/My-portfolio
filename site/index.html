@@ -6,19 +6,13 @@
 <title>Sara Bansod — UX Designer Portfolio</title>
 <meta name="description" content="Portfolio of Sara Bansod, UX Designer. Case studies in research-led product design, design systems, and accessible interfaces." />
 
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-<meta property="og:title" content="Sara Bansod — UX Designer Portfolio" />
-<meta property="og:description" content="Case studies in research-led product design, design systems, and accessible interfaces." />
-<meta property="og:type" content="website" />
-<meta property="og:image" content="assets/images/sara-bansod.jpg" />
-<meta name="twitter:card" content="summary_large_image" />
-
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet" />
 
-<link rel="stylesheet" href="css/styles.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23B46A4D'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' font-weight='700' fill='%23fff' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -96,8 +90,9 @@
         <div class="hero-role reveal d2"><mark class="hl">UX Designer · currently at Adobe, India</mark></div>
         <p class="lead reveal d2">Hi, I’m Sara — a multidisciplinary UX Designer who blends research, design thinking, and creativity to design intuitive and accessible user experiences.</p>
         <div class="hero-cta reveal d3">
-          <a href="#work" data-nav data-tab="ux" class="btn btn-primary">View work
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="#work" data-nav data-tab="ux" class="btn btn-primary cta-underline"><span>View work</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            <svg class="u-draw" viewBox="0 0 200 12" preserveAspectRatio="none" aria-hidden="true"><path d="M3 8 C 40 3, 80 11, 120 6 S 180 3, 197 7"/></svg></a>
           <a href="#contact-anchor" data-nav data-scroll="contact" class="btn btn-ghost">Contact me</a>
         </div>
       </div>
@@ -106,20 +101,38 @@
   </div>
 
 
-  <!-- ABOUT PREVIEW -->
+  <!-- FEATURED PROJECTS -->
   <div class="section">
-    <div class="container about-prev">
-      <div class="reveal">
-        <div class="chapter"><span class="ch-line"></span><span class="ch-num">01</span></div>
-        <span class="eyebrow">About</span>
-        <div class="about-facts" style="margin-top:28px">
-          <div class="fact"><div class="k">Currently</div><div class="v">Adobe, India</div></div>
-          <div class="fact"><div class="k">Experience</div><div class="v">2+ years</div></div>
-          <div class="fact"><div class="k">Education</div><div class="v">B.Des in UX</div></div>
-          <div class="fact"><div class="k">Based in</div><div class="v">Noida, IN</div></div>
+    <div class="container">
+      <div class="chapter reveal"><span class="ch-line"></span><span class="ch-num">01</span></div>
+      <div class="section-head reveal">
+        <span class="eyebrow">Selected work</span>
+        <h2 class="h-section">A few projects I’ve loved working on.</h2>
+      </div>
+      <div class="feat-list" id="featuredGrid"><!-- injected --></div>
+      <div style="margin-top:clamp(48px,7vw,88px)"><a href="#work" data-nav data-tab="ux" class="btn-link">See all work
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+    </div>
+  </div>
+
+  <!-- PROFESSIONAL STATS -->
+  <div class="snapshot-band">
+    <div class="section">
+      <div class="container">
+        <div class="prostats reveal">
+          <div class="ps-head">
+            <p class="ps-eyebrow">Professional snapshot</p>
+            <h2 class="ps-title">A little context behind the work.</h2>
+          </div>
+          <div class="ps-row">
+            <div class="ps-item lead-stat"><p class="ps-v">Adobe</p><p class="ps-k">Currently</p></div>
+            <div class="ps-item lead-stat"><p class="ps-v">2+ years</p><p class="ps-k">UX experience</p></div>
+            <div class="ps-item"><p class="ps-v">B.Des</p><p class="ps-k">User experience</p></div>
+            <div class="ps-item"><p class="ps-v">Noida</p><p class="ps-k">India · Based in</p></div>
+          </div>
+          <div class="ps-cta"><a href="#about" data-nav class="btn-link">Know more about me
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
         </div>
-        <a href="#about" data-nav class="btn btn-ghost btn-sm" style="margin-top:26px">Know more about me
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
     </div>
   </div>
@@ -163,17 +176,21 @@
     </div>
   </div>
 
-  <!-- FEATURED PROJECTS -->
+    <!-- SKETCHBOOK TEASER -->
   <div class="section">
     <div class="container">
-      <div class="chapter reveal"><span class="ch-line"></span><span class="ch-num">03</span></div>
-      <div class="section-head center reveal">
-        <span class="eyebrow" style="justify-content:center">Selected work</span>
-        <h2 class="h-section">Featured case studies</h2>
+      <div class="sk-teaser reveal">
+        <div class="skt-grid">
+          <div class="skt-text">
+            <p class="skt-eyebrow">Beyond product design</p>
+            <h3>I keep a sketchbook, too.</h3>
+            <p class="skt-copy">Illustration gives me a place to experiment, observe and make things without a brief.</p>
+            <a href="#work" data-nav data-tab="ink" class="btn-link">Open sketchbook
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+          <div class="skt-art" id="sktArt"><!-- injected --></div>
+        </div>
       </div>
-      <div class="proj-grid" id="featuredGrid"><!-- injected --></div>
-      <div style="text-align:center;margin-top:36px"><a href="#work" data-nav data-tab="ux" class="btn-link">See all work
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
     </div>
   </div>
 
@@ -196,36 +213,34 @@
      ABOUT
      ============================================================ -->
 <section class="page" id="page-about">
-  <div class="page-hero">
-    <div class="container">
-      <span class="eyebrow reveal">About me</span>
-      <h1 class="h-hero reveal d1">Creating Experiences That Matter</h1>
-    </div>
-  </div>
+  <div class="container">
 
-  <!-- PROFILE -->
-  <div class="section" style="padding-top:var(--s3)">
-    <div class="container profile">
-      <div class="avatar reveal">
-        <div class="ph avatar-photo"><img src="assets/images/sara-bansod.jpg" alt="Sara Bansod" /></div>
-      </div>
-      
-      <div class="reveal d1">
-        <h2 class="h-sub" style="font-size:26px">Hi, I’m Sara.</h2>
-        <p class="muted" style="margin-top:14px">I’m a multidisciplinary UX Designer who enjoys solving problems at the intersection of user needs and business goals. Alongside my UX practice, I’ve explored Customer Experience (CX), which has broadened my perspective beyond individual interactions to the end-to-end customer journey.</p>
-        <p class="muted" style="margin-top:14px">By combining user empathy with an understanding of business processes, I strive to design experiences that create value for both customers and organizations. My approach is rooted in Design Thinking, blending research, strategy, and creativity to transform complex challenges into intuitive, impactful solutions.</p>
-        <div class="profile-facts">
-          <div class="fact"><div class="k">Location</div><div class="v">Noida, India</div></div>
-          <div class="fact"><div class="k">Current company</div><div class="v">Adobe</div></div>
-          <div class="fact"><div class="k">Experience</div><div class="v">2+ years</div></div>
+    <!-- CONVERSATIONAL INTRO -->
+    <div class="about-intro reveal">
+      <div class="a-photo"><img src="assets/img-01.jpg" alt="Sara Bansod"/><svg class="a-mark" viewBox="0 0 52 52" aria-hidden="true"><path d="M8 30 C 12 14, 30 8, 44 14 M40 9 l5 5 -6 4"/></svg></div>
+      <div>
+        <h1 class="a-hi">Hi, I&rsquo;m Sara. <span class="wave">&#128075;</span></h1>
+        <div class="a-text">
+          <p>I&rsquo;m a <strong>multidisciplinary UX Designer</strong> who enjoys bringing clarity to complexity. Through research, strategy, and creative exploration, I design intuitive and accessible experiences that balance what people need with what businesses aim to achieve. Exploring Customer Experience (CX) has further shaped my perspective, encouraging me to look at each interaction as part of a larger, connected journey.</p>
+          <a href="#" class="btn btn-primary btn-sm a-resume" data-resume>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16"/></svg>Download r&eacute;sum&eacute; (PDF)</a>
         </div>
-        <a href="#" class="btn btn-primary btn-sm" data-resume>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16"/></svg>Download résumé (PDF)</a>
+      </div>
+    </div>
+
+    <!-- PRINCIPLES -->
+    <div class="principles">
+      <div class="section-head reveal"><span class="eyebrow">Approach</span><h2 class="h-section">What shapes how I design</h2></div>
+      <div class="pr-grid">
+        <div class="pr reveal"><span class="pr-n">01</span><h3>Making complexity understandable</h3><p>Design Thinking, for me, is about transforming complex challenges into intuitive, impactful solutions &mdash; not simplifying the problem, but making it easy to act on.</p></div>
+        <div class="pr reveal d1"><span class="pr-n">02</span><h3>Designing around real user needs</h3><p>I solve at the intersection of user needs and business goals, combining user empathy with an understanding of business processes so the outcome creates value on both sides.</p></div>
+        <div class="pr reveal"><span class="pr-n">03</span><h3>Thinking beyond individual screens</h3><p>Exploring Customer Experience broadened my perspective beyond individual interactions to the end-to-end journey &mdash; I design the flow, not just the frame.</p></div>
+        <div class="pr reveal d1"><span class="pr-n">04</span><h3>Combining research and creative exploration</h3><p>I blend research, strategy and creativity &mdash; grounding decisions in what I learn, then exploring openly to find the intuitive path through.</p></div>
       </div>
     </div>
   </div>
 
-  <!-- EDUCATION + EXPERIENCE -->
+<!-- EDUCATION + EXPERIENCE -->
   <div class="section">
     <div class="container two-col">
       <div class="reveal">
@@ -288,8 +303,28 @@
   <!-- SKILLS -->
   <div class="section" style="padding-top:0">
     <div class="container">
-      <div class="section-head reveal"><span class="eyebrow">Skills</span><h2 class="h-section">What I bring to a team</h2></div>
+      <div class="section-head reveal"><span class="eyebrow">Strengths</span><h2 class="h-section">What I bring to a team</h2></div>
       <div class="skill-cloud reveal d1" id="skillsWrap"></div>
+    </div>
+  </div>
+
+  <!-- OUTSIDE PRODUCT DESIGN -->
+  <div class="section" style="padding-top:0">
+    <div class="container">
+      <div class="outside" style="border-top:none;padding-top:0">
+        <div class="section-head reveal"><span class="eyebrow">Beyond the screen</span><h2 class="h-section">Outside product design</h2></div>
+        <div class="out-grid reveal">
+          <div class="out-copy">
+            <p>When I&rsquo;m not designing products, I&rsquo;m usually illustrating. It&rsquo;s a creative practice that keeps my eye sharp &mdash; a space to experiment, observe, and think visually &mdash; and it feeds the same curiosity and craft I bring to research and creative exploration in my UX work.</p>
+            <a href="#work" data-nav data-tab="ink" class="btn-link">Open the sketchbook
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+          <div class="out-art">
+            <figure><img src="assets/img-02.jpg" alt="The Yellow Umbrella" loading="lazy"/></figure>
+            <figure><img src="assets/img-03.jpg" alt="One Afternoon" loading="lazy"/></figure>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -324,7 +359,7 @@
   <div class="page-hero">
     <div class="container">
       <span class="eyebrow reveal">Work</span>
-      <h1 class="h-hero reveal d1">Selected work across craft.</h1>
+      <h1 class="h-hero reveal d1">Selected work, thoughts &amp; explorations.</h1>
       <p class="lead reveal d2">UX case studies, visual design, and a sketchbook of illustration work — pick a lane.</p>
       <div class="work-tabs reveal d2" id="workTabs">
         <button class="work-tab active" data-tab="ux">UX Design</button>
@@ -338,7 +373,7 @@
         <div class="pg-grid" id="uxGrid"><!-- injected --></div>
       </div>
       <div class="work-panel" data-panel="ink">
-        <p class="ink-intro reveal">Illustration is where I started — a hobby that grew into commissioned work. A few favourites, with the tools behind them.</p>
+        <p class="ink-intro reveal">Illustration is a creative hobby I keep coming back to — a space to experiment, explore, and create freely. Here are a few of my favourites.</p>
         <div class="art-grid" id="artGrid"><!-- injected --></div>
       </div>
     </div>
@@ -372,12 +407,50 @@
         <div class="m"><div class="k">Tools</div><div class="v">Figma · FigJam · Miro</div></div>
         <div class="m"><div class="k">Domain</div><div class="v">Childcare · EdTech · AI</div></div>
       </div>
-      <div class="cs-cover reveal d3"><img src="assets/images/tinytots-hub-cover-image.jpg" alt="TinyTots Hub — cover image" loading="lazy"/></div>
+      <div class="cs-cover reveal d3"><img src="assets/img-04.jpg" alt="TinyTots Hub — cover image" loading="lazy"/></div>
     </div>
   </div>
 
   <div class="container">
     <div class="cs-body">
+
+            <div class="glance reveal">
+<div class="g-problem">
+          <p class="g-eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 1v3M12 20v3M1 12h3M20 12h3"/></svg>The problem</p>
+          <p class="g-stmt">Fragmented updates and limited visibility leave working parents worrying through the day &mdash; the journey runs drop-off &rarr; worry all day &rarr; scattered updates &rarr; considering switching daycare.</p>
+        </div>
+        <div class="g-body">
+          <div class="g-insight">
+            <p class="gi-tag">Key insight <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg></p>
+            <p class="gi-lead">The real gap wasn't more data, it was <strong>trusted, personalised visibility</strong> into a child's development &mdash; delivered in a way that feels safe and approachable.</p>
+            <p class="gi-ev">From 15 research articles and 3 parent interviews.</p>
+          </div>
+          <div class="g-decisions">
+            <p class="gd-h">Key design decisions</p>
+            <div class="g-dec"><div class="gd-n">01</div><div><p class="gd-d">Turn passive smart-toy interactions into a <strong>readable development story</strong> &mdash; an AI loop that captures interactions and surfaces patterns, emotions and trends on a friendly dashboard.</p></div></div><div class="g-dec"><div class="gd-n">02</div><div><p class="gd-d">Adopt a <strong>soft, friendly, trustworthy palette</strong> with clear semantic roles for actions, success, insights and alerts, appropriate for a childcare product.</p></div></div>
+          </div>
+        </div>
+        <div class="g-outcome">
+          <p class="go-tag">Outcome &amp; learning</p>
+          <p class="go-stmt">A research-led concept that reframes scattered daycare updates into personalised developmental insights and real-time activity for parents &mdash; a safer, more connected childcare experience.</p>
+        </div>
+      </div>
+
+      <div class="cs-changed reveal">
+        <div class="section-head"><span class="eyebrow">Outcomes</span><h2 style="font-size:clamp(22px,2.6vw,30px)">What changed</h2></div>
+        <div class="wc-grid"><div class="wc"><span class="wc-tag">Learned</span><p class="wc-metric">15 articles · 3 interviews</p><p>Research made the real gap clear: parents needed <strong>trusted, personalised visibility</strong> into development, not more scattered updates.</p></div><div class="wc"><span class="wc-tag">Shipped</span><p>An <strong>AI-integrated smart-toy loop</strong> that turns interactions into patterns, emotions and trends on a friendly parent dashboard.</p></div><div class="wc"><span class="wc-tag">Improved</span><p>A <strong>soft, trustworthy design system</strong> with clear semantic roles for actions, success, insights and alerts, suited to a childcare product.</p></div></div>
+      </div>
+
+      <div class="process-gate" id="pgate-0">
+        <p class="pg-eyebrow">Curious how I got there?</p>
+        <h2>The research, explorations and iterations behind the final experience.</h2>
+        <button type="button" class="process-toggle" aria-expanded="false" aria-controls="pdeep-0" data-ptoggle>
+          <span class="pt-label">Explore the process</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+      </div>
+      <div class="process-deep" id="pdeep-0" hidden>
+        <div class="pd-inner">
 
       <div class="cs-section reveal">
         <span class="eyebrow">Overview</span>
@@ -434,6 +507,15 @@
       <div class="cs-section reveal">
         <span class="eyebrow">How it works</span>
         <h2>The AI-integrated smart-toy loop</h2>
+        <div class="decision reveal">
+          <p class="d-tag">Design Decision 01</p>
+          <div class="d-row">
+            <div class="d-col"><p class="dk">What I noticed</p><p class="dv">Smart-toy sessions produced raw interaction data, but parents couldn't read it &mdash; they were left with scattered updates rather than understanding.</p></div>
+            <div class="d-col"><p class="dk">What I changed</p><p class="dv">Designed an end-to-end loop where NLP interprets responses and AI extracts patterns, emotions and trends, then renders them as charts on a friendly dashboard.</p></div>
+            <div class="d-col"><p class="dk">Why</p><p class="dv">It converts activity into a development story parents can trust and act on &mdash; directly answering the visibility gap surfaced in research.</p></div>
+          </div>
+        </div>
+
         <div class="hiw"><div class="hiw-row"><div class="hiw-card"><span class="hiw-n">1</span><p>Infant interacts with the AI smart toy.</p></div><span class="hiw-ar">&rarr;</span><div class="hiw-card"><span class="hiw-n">2</span><p>Mic + voice recognition capture verbal responses.</p></div><span class="hiw-ar">&rarr;</span><div class="hiw-card"><span class="hiw-n">3</span><p>Smart toy records the interactions.</p></div></div><div class="hiw-down"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M6 13l6 6 6-6"/></svg></div><div class="hiw-row"><div class="hiw-card"><span class="hiw-n">4</span><p>AI extracts patterns, emotions and trends.</p></div><span class="hiw-ar">&rarr;</span><div class="hiw-card"><span class="hiw-n">5</span><p>Camera captures reactions; screen shows images.</p></div><span class="hiw-ar">&rarr;</span><div class="hiw-card"><span class="hiw-n">6</span><p>NLP helps interpret the infant's responses.</p></div></div><div class="hiw-down"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M6 13l6 6 6-6"/></svg></div><div class="hiw-row"><div class="hiw-card"><span class="hiw-n">7</span><p>AI generates charts, graphs and analysis.</p></div><span class="hiw-ar">&rarr;</span><div class="hiw-card"><span class="hiw-n">8</span><p>Results shown on a friendly dashboard.</p></div><span class="hiw-ar">&rarr;</span><div class="hiw-card"><span class="hiw-n">9</span><p>Dashboard gives an overview over time.</p></div></div></div>
       </div>
 
@@ -459,16 +541,11 @@
         <div class="browser">
           <div class="bbar"><i></i><i></i><i></i><span class="burl">tinytots.app</span></div>
           <div class="bgrid">
-            <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><span class="ph-label">Dashboard</span></div>
-            <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><span class="ph-label">Activity feed</span></div>
-            <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><span class="ph-label">Development insights</span></div>
-            <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><span class="ph-label">Profile &amp; settings</span></div>
+            <div class="shot"><img src="assets/img-05.jpg" alt="TinyTots Hub login screen — Welcome back, with User ID and password fields" loading="lazy"/></div>
+            <div class="shot"><img src="assets/img-06.jpg" alt="TinyTots Hub overview dashboard — today's milestone, goals achieved, time spent per activity, activity feed, and AI recommendations" loading="lazy"/></div>
+            <div class="shot"><img src="assets/img-07.jpg" alt="TinyTots Hub attendance page — attendance rate, present/absent days, current streak, and a daily check-in/pickup log" loading="lazy"/></div>
+            <div class="shot"><img src="assets/img-08.jpg" alt="TinyTots Hub activities page — music activities, song library, performance by category, and a moments photo gallery" loading="lazy"/></div>
           </div>
-        </div>
-        <div class="mob-row">
-          <div class="ph" style="aspect-ratio:9/16;border-radius:var(--r-md)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M11 18h2"/></svg><span class="ph-label">Mobile — home</span></div>
-          <div class="ph" style="aspect-ratio:9/16;border-radius:var(--r-md)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M11 18h2"/></svg><span class="ph-label">Mobile — activity</span></div>
-          <div class="ph" style="aspect-ratio:9/16;border-radius:var(--r-md)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M11 18h2"/></svg><span class="ph-label">Mobile — insights</span></div>
         </div>
       </div>
 
@@ -477,6 +554,18 @@
         <h2>Interactive demo</h2>
         <p>A placeholder for the clickable prototype — drop your Figma or Framer embed here so visitors can walk the flow.</p>
         <div class="ph demo-ph"><span class="play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></span><span class="ph-label">Prototype demo — embed placeholder</span></div>
+      </div>
+
+        </div>
+      </div>
+
+      <div class="cs-lookback reveal">
+        <div class="section-head"><span class="eyebrow">Reflection</span><h2 style="font-size:clamp(22px,2.6vw,30px)">Looking back</h2></div>
+        <div class="lb-grid">
+          <div class="lb"><p class="lb-k">What worked</p><p>The research-led framing held up: reframing scattered updates as a readable development story gave the concept a clear reason to exist.</p></div>
+          <div class="lb"><p class="lb-k">What I would change</p><p>With more time I would pressure-test the concept with parents directly, beyond the three interviews, before committing to the dashboard model.</p></div>
+          <div class="lb"><p class="lb-k">What I would explore next</p><p>Deeper into the AI loop &mdash; how NLP interpretation of a child&rsquo;s responses can stay trustworthy and privacy-safe as the data grows.</p></div>
+        </div>
       </div>
 
       <div class="prevnext">
@@ -512,12 +601,50 @@
         <div class="m"><div class="k">Tools</div><div class="v">Figma · Lyssna · MS Office</div></div>
         <div class="m"><div class="k">Type</div><div class="v">Capstone project</div></div>
       </div>
-      <div class="cs-cover cs-cover-tall reveal d3"><img src="assets/images/saral-pay-cover.jpg" alt="Saral Pay cover" style="width:100%;height:100%;object-fit:cover"/></div>
+      <div class="cs-cover cs-cover-tall reveal d3"><img src="assets/img-09.jpg" alt="Saral Pay cover" style="width:100%;height:100%;object-fit:cover"/></div>
     </div>
   </div>
 
   <div class="container">
     <div class="cs-body">
+
+            <div class="glance reveal">
+<div class="g-problem">
+          <p class="g-eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 1v3M12 20v3M1 12h3M20 12h3"/></svg>The problem</p>
+          <p class="g-stmt">Low-confidence users feel uncertain paying online alone &mdash; afraid of mistakes and losing control, and frequently dependent on trusted family members for financial tasks.</p>
+        </div>
+        <div class="g-body">
+          <div class="g-insight">
+            <p class="gi-tag">Key insight <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg></p>
+            <p class="gi-lead"><strong>The biggest barrier isn't digital literacy &mdash; it's digital confidence.</strong></p>
+            <p class="gi-ev">Users already have smartphones and understand technology; the real barrier is confidence while handling money.</p>
+          </div>
+          <div class="g-decisions">
+            <p class="gd-h">Key design decisions</p>
+            <div class="g-dec"><div class="gd-n">01</div><div><p class="gd-d">Prioritise <strong>visibility, confirmation and control</strong> &mdash; see details, verify before confirming, and choose your level of AI help.</p></div></div><div class="g-dec"><div class="gd-n">02</div><div><p class="gd-d">Build reassurance into the flow with <strong>Payment Guard, confirmations, fraud alerts, OTP/PIN and a 10-second undo</strong>, giving users time to review and recover.</p></div></div>
+          </div>
+        </div>
+        <div class="g-outcome">
+          <p class="go-tag">Outcome &amp; learning</p>
+          <p class="go-stmt">A design direction where clear payee details, predictable steps, visible status, warnings and recovery proved more reassuring than generic security messaging.</p>
+        </div>
+      </div>
+
+      <div class="cs-changed reveal">
+        <div class="section-head"><span class="eyebrow">Outcomes</span><h2 style="font-size:clamp(22px,2.6vw,30px)">What changed</h2></div>
+        <div class="wc-grid"><div class="wc"><span class="wc-tag">Validated</span><p class="wc-metric">3 participants</p><p>Moderated usability testing (55+, retired, new to online payments) using Figma prototypes and Lyssna &mdash; the <strong>Bills Home screen performed best</strong>, with the highest task success.</p></div><div class="wc"><span class="wc-tag">Improved</span><p>Reassurance built into the flow &mdash; <strong>Payment Guard, confirmations, fraud alerts, OTP/PIN and a 10-second undo</strong> &mdash; gave users time to review and recover.</p></div><div class="wc"><span class="wc-tag">Learned</span><p>The biggest barrier isn&rsquo;t digital literacy &mdash; it&rsquo;s <strong>digital confidence</strong>. Clear details and recovery reassured more than generic security copy.</p></div></div>
+      </div>
+
+      <div class="process-gate" id="pgate-1">
+        <p class="pg-eyebrow">Curious how I got there?</p>
+        <h2>The research, explorations and iterations behind the final experience.</h2>
+        <button type="button" class="process-toggle" aria-expanded="false" aria-controls="pdeep-1" data-ptoggle>
+          <span class="pt-label">Explore the process</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+      </div>
+      <div class="process-deep" id="pdeep-1" hidden>
+        <div class="pd-inner">
 
       <div class="cs-section reveal">
         <span class="eyebrow">01 · Our topic &amp; the current landscape</span>
@@ -616,31 +743,31 @@
           <div class="saral-screen-block">
             <h3>Splash screen — invite trust, security &amp; approachability</h3>
             <p>Realistic, slightly-uncertain imagery of the user segments. A <strong>blue-teal palette</strong> signals calm, security and trust; <strong>orange accents</strong> add warmth and highlight key information.</p>
-            <div class="ph saral-ph"><img src="assets/images/saralpay-splash-screen.jpg" alt="SaralPay splash screen — an older couple looking at a phone together" loading="lazy"/></div>
+            <div class="ph saral-ph"><img src="assets/img-10.jpg" alt="SaralPay splash screen — an older couple looking at a phone together" loading="lazy"/></div>
           </div>
 
           <div class="saral-screen-block">
             <h3>Onboarding — setting up a customised dashboard</h3>
             <p>Users personalise the app around the bills they pay and the people they trust. <strong>Controlled Payments</strong> limits transfers to trusted recipients to prevent accidental sends — and every choice is reversible.</p>
-            <div class="ph saral-ph"><img src="assets/images/controlled-payment-mode-onboarding-screen.jpg" alt="Controlled Payment Mode onboarding screen" loading="lazy"/></div>
+            <div class="ph saral-ph"><img src="assets/img-11.jpg" alt="Controlled Payment Mode onboarding screen" loading="lazy"/></div>
           </div>
 
           <div class="saral-screen-block">
             <h3>Dashboard — customised, gamified &amp; easy access</h3>
             <p>Shows only relevant options, trusted recipients and frequent actions to cut complexity. A <strong>gamified progress bar</strong> rewards activity, with direct access to ASHA via chat or voice.</p>
-            <div class="ph saral-ph"><img src="assets/images/saralpay-pay-bills-dashboard-screen.jpg" alt="SaralPay Pay Bills dashboard screen" loading="lazy"/></div>
+            <div class="ph saral-ph"><img src="assets/img-12.jpg" alt="SaralPay Pay Bills dashboard screen" loading="lazy"/></div>
           </div>
 
           <div class="saral-screen-block">
             <h3>ASHA — AI support &amp; help agent</h3>
             <p>A familiar chat/voice companion that guides each step with <strong>safety checks — but never decides for the user</strong>. Every critical action needs the user's approval, and ASHA flags how to protect sensitive information.</p>
-            <div class="ph saral-ph"><img src="assets/images/asha-ai-payment-confirmation-chat-screen.jpg" alt="ASHA AI payment confirmation chat screen" loading="lazy"/></div>
+            <div class="ph saral-ph"><img src="assets/img-13.jpg" alt="ASHA AI payment confirmation chat screen" loading="lazy"/></div>
           </div>
 
           <div class="saral-screen-block">
             <h3>Reward-Based Motivation &amp; Retention</h3>
             <p>A milestone-based reward system that celebrates users for completing key actions and encourages them to build consistent digital payment habits. After completing four steps, users unlock a 5% cashback coupon, creating a sense of achievement while motivating continued independent usage.</p>
-            <div class="ph saral-ph"><img src="assets/images/surprise-5-cashback-coupon-reward-screen.jpg" alt="Surprise 5% cashback coupon reward screen" loading="lazy"/></div>
+            <div class="ph saral-ph"><img src="assets/img-14.jpg" alt="Surprise 5% cashback coupon reward screen" loading="lazy"/></div>
           </div>
         </div>
       </div>
@@ -662,8 +789,17 @@
       <div class="cs-section reveal">
         <span class="eyebrow">Heat-map results</span>
         <h2>Where users felt confident — and where they hesitated</h2>
+        <div class="decision reveal">
+          <p class="d-tag">Design Decision 01</p>
+          <div class="d-row">
+            <div class="d-col"><p class="dk">What I noticed</p><p class="dv">In testing, the Controlled Payment screen created the most friction &mdash; the Safe Mode toggle was overlooked or misunderstood, and the Welcome screen lacked a clear starting action.</p></div>
+            <div class="d-col"><p class="dk">What I changed</p><p class="dv">Leaned the flow toward the pattern that already worked &mdash; the Bills Home card model &mdash; with clearer payee details, predictable steps and visible payment status over generic security messaging.</p></div>
+            <div class="d-col"><p class="dk">Why</p><p class="dv">The research was explicit: reassurance and control reduce fear of irreversible mistakes far more than abstract security copy, so confidence &mdash; not access &mdash; had to be the design target.</p></div>
+          </div>
+        </div>
+
         <p>The <strong>Bills Home screen performed best</strong>, with users quickly identifying the electricity-bill card and achieving the highest task success. The <strong>Controlled Payment screen created the most friction</strong>, mainly because the Safe Mode toggle was overlooked or misunderstood. The <strong>Welcome screen lacked a clear starting action</strong>, causing users to explore without direction.</p>
-        <div class="cs-img" style="margin-top:14px;max-width:460px"><img src="assets/images/heat-map-analysis-across-three-saral-pay-screens.jpg" alt="Heat-map analysis across three Saral Pay screens" style="width:100%;height:auto;display:block"/></div>
+        <div class="cs-img" style="margin-top:14px;max-width:460px"><img src="assets/img-15.jpg" alt="Heat-map analysis across three Saral Pay screens" style="width:100%;height:auto;display:block"/></div>
         <p style="margin-top:18px">Three main improvements:</p>
         <div class="cs-list">
           <div class="li"><span class="n">1</span><p>Add a clear "Get Started" action on the Welcome screen.</p></div>
@@ -779,6 +915,18 @@
         <div class="cs-img" style="margin-top:14px;max-width:420px;margin-left:0"><div style="position:relative;width:100%;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/zNCqPWBr5tQ" title="SolarPay demo" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
       </div>
 
+        </div>
+      </div>
+
+      <div class="cs-lookback reveal">
+        <div class="section-head"><span class="eyebrow">Reflection</span><h2 style="font-size:clamp(22px,2.6vw,30px)">Looking back</h2></div>
+        <div class="lb-grid">
+          <div class="lb"><p class="lb-k">What worked</p><p>Designing for confidence and control &mdash; visibility, confirmation, recovery &mdash; measurably reduced hesitation, and the Bills Home card model tested strongest.</p></div>
+          <div class="lb"><p class="lb-k">What I would change</p><p>The Controlled Payment screen created the most friction because the Safe Mode toggle was overlooked; I would redesign that control and give the Welcome screen a clearer starting action.</p></div>
+          <div class="lb"><p class="lb-k">What I would explore next</p><p>Extending the accessibility layer flagged in the work &mdash; voice, icons and local language &mdash; to widen the user base further.</p></div>
+        </div>
+      </div>
+
       <div class="prevnext">
         <div class="pn prev" data-nav="#case"><div class="dir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="transform:scaleX(-1)"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Previous</div><h4>TinyTots Hub</h4></div>
         <div class="pn next" data-nav="#work" data-tab="ux"><div class="dir">Next<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div><h4>All UX work</h4></div>
@@ -805,16 +953,62 @@
         <div class="m"><div class="k">Focus</div><div class="v">Hawkers &amp; customers</div></div>
         <div class="m"><div class="k">Type</div><div class="v">UX case study</div></div>
       </div>
-      <div class="cs-cover reveal d3"><img src="assets/images/streeteats-cover-illustration.jpg" alt="StreetEats cover illustration" style="width:100%;height:100%;object-fit:cover"/></div>
+      <div class="cs-cover reveal d3"><img src="assets/img-16.jpg" alt="StreetEats cover illustration" style="width:100%;height:100%;object-fit:cover"/></div>
     </div>
   </div>
 
   <div class="container">
     <div class="cs-body">
 
+            <div class="glance reveal">
+<div class="g-problem">
+          <p class="g-eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 1v3M12 20v3M1 12h3M20 12h3"/></svg>The problem</p>
+          <p class="g-stmt">Hawkers have irregular placement, which causes them to lose customers and makes it difficult for authorities to monitor their movements. There is no platform to connect hawkers with customers.</p>
+        </div>
+        <div class="g-body">
+          <div class="g-insight">
+            <p class="gi-tag">Key insight <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg></p>
+            <p class="gi-lead">The unmet need is presence and awareness: customers want to be <strong>notified when a seller is in their area</strong>, and hawkers need a way to reach a wider audience.</p>
+          </div>
+          <div class="g-decisions">
+            <p class="gd-h">Key design decisions</p>
+            <div class="g-dec"><div class="gd-n">01</div><div><p class="gd-d">Serve <strong>both sides of the market</strong> &mdash; sellers list themselves and share their information; customers reach out, rate, and share.</p></div></div><div class="g-dec"><div class="gd-n">02</div><div><p class="gd-d">Center the experience on <strong>real-time location</strong> so people can discover nearby hawkers instead of relying on chance.</p></div></div>
+          </div>
+        </div>
+        <div class="g-outcome">
+          <p class="go-tag">Outcome &amp; learning</p>
+          <p class="go-stmt">A two-sided discovery concept that gives hawkers reach and customers awareness.</p>
+        </div>
+      </div>
+
+      <div class="cs-changed reveal">
+        <div class="section-head"><span class="eyebrow">Outcomes</span><h2 style="font-size:clamp(22px,2.6vw,30px)">What changed</h2></div>
+        <div class="wc-grid"><div class="wc"><span class="wc-tag">Learned</span><p>The core barrier is <strong>presence and awareness</strong> &mdash; customers want to be notified when a seller is nearby, and hawkers need to reach a wider audience.</p></div><div class="wc"><span class="wc-tag">Shipped</span><p>A <strong>two-sided discovery concept</strong> &mdash; sellers list themselves and share info; customers discover, rate and share &mdash; centred on real-time location.</p></div><div class="wc"><span class="wc-tag">Improved</span><p>Grounded in <strong>contextual inquiry, competitor study, task analysis and card sorting</strong>, then structured into a clear information architecture.</p></div></div>
+      </div>
+
+      <div class="process-gate" id="pgate-2">
+        <p class="pg-eyebrow">Curious how I got there?</p>
+        <h2>The research, explorations and iterations behind the final experience.</h2>
+        <button type="button" class="process-toggle" aria-expanded="false" aria-controls="pdeep-2" data-ptoggle>
+          <span class="pt-label">Explore the process</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+      </div>
+      <div class="process-deep" id="pdeep-2" hidden>
+        <div class="pd-inner">
+
       <div class="cs-section reveal">
         <span class="eyebrow">About the project</span>
         <h2>Problem statement</h2>
+        <div class="decision reveal">
+          <p class="d-tag">Design Decision 01</p>
+          <div class="d-row">
+            <div class="d-col"><p class="dk">What I noticed</p><p class="dv">Hawkers' irregular placement means customers can't find them and the value they offer goes unseen &mdash; the core issue is unpredictable presence, not food quality.</p></div>
+            <div class="d-col"><p class="dk">What I changed</p><p class="dv">Made real-time location and "notify me when the seller is in my area" the backbone of the app, and let hawkers list themselves so both sides connect.</p></div>
+            <div class="d-col"><p class="dk">Why</p><p class="dv">Solving for awareness and presence directly addresses why hawkers lose customers, turning a chance encounter into a discoverable, repeatable connection.</p></div>
+          </div>
+        </div>
+
         <p>Hawkers have irregular placement, which causes them to lose customers and makes it difficult for the authorities to monitor their movements.</p>
         <div class="cs-cards" style="margin-top:22px">
           <div class="c"><h4>Who</h4><p>Hawkers</p></div>
@@ -882,7 +1076,7 @@
         <div class="hub"><div class="center"><h4>Customer</h4></div><div class="ring"><div class="ent"><h5>Hawkers</h5><ul><li>We have the best vadapav in the entire city</li><li>You can/ cannot order in advance.</li></ul></div><div class="ent"><h5>Teachers</h5><ul><li>Extra classes today.</li><li>Submit it before tomorrow's class.</li></ul></div><div class="ent"><h5>Family</h5><ul><li>How can you trust on the outside street food.</li><li>Please have your food on time</li></ul></div><div class="ent"><h5>Friends</h5><ul><li>The Vadapav stall outside college looks good. Not sure about the taste</li></ul></div><div class="ent"><h5>Mess Incharge</h5><ul><li>You won't get food now. You should have come earlier</li></ul></div></div></div>
         <div class="hub"><div class="center"><h4>Food Hawkers</h4><ul><li>Roams around to sell products</li><li>Buying raw materials.</li><li>Setting up the cart.</li><li>Monthly salary to waiter.</li><li>Issue hawker's license and sell only in hawker zone.</li></ul></div><div class="ring"><div class="ent"><h5>Cart</h5><ul><li>With wheels so that the hawker can go to different places</li></ul><div class="brk"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg><span>Not sure which areas to go to. Roams around cluelessly only on instincts</span></div></div><div class="ent"><h5>Apps / Website</h5><ul><li>Connecting hawkers with customers</li></ul><div class="brk"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg><span>Not sure which app is good</span></div></div><div class="ent"><h5>Family/ Friends</h5><ul><li>Provides support, both mentally and physically</li><li>Support during hard times</li><li>Gives suggestions and advices</li><li>Motivates</li></ul><div class="brk"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg><span>Provide them with basic necessities</span></div></div><div class="ent"><h5>Police</h5><ul><li>Doesn't allow to wait at one point for too long</li></ul><div class="brk"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg><span>Traffic jam</span></div></div><div class="ent"><h5>Competitors</h5><ul><li>Motivates to do better</li><li>Gets information about other places where these hawkers sell their food products.</li></ul></div><div class="ent"><h5>Customers</h5><ul><li>Motivates to do better</li><li>Gets information about other places where these hawkers sell their food products.</li><li>Asks for contact details</li><li>Asks for menu</li><li>Asks them to tell it to others</li><li>Asks if they liked the taste</li></ul><div class="brk"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg><span>Prank calls; Not sure how to tell many people at a time</span></div></div></div></div>
         <div class="seq"><div class="intent">Intent : <span>Find a way to reach to a wider audience</span></div><div class="sstep">Trigger : Family needs financial help</div><div class="sar">&darr;</div><div class="sstep">Search for different ways to expand his business</div><div class="sar">&darr;</div><div class="sstep">Thinks of delivering products at customer's home</div><div class="sbrk"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg><span>No waiter to help</span></div><div class="sstep">Travels several locations and tries selling food</div><div class="sbrk"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg><span>Roaming only on the basis of instincts</span></div><div class="intent">Intent : <span>Word of mouth marketing | Attract new customers</span></div><div class="sstep">Gives his contact details, pamphlets to the regular customers and asks them to give it to others</div><div class="sbrk"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg><span>sometimes kids uses it for prank calls</span></div><div class="sstep">Keeps combos and discounts on certain dishes.</div><div class="sbrk"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg><span>Better offers on online food apps</span></div><div class="intent">Intent : <span>Go digital</span></div><div class="sstep">Thinks of listing his name in a food delivery app</div><div class="sar">&darr;</div><div class="sstep">Creates account on multiple food delivery apps</div><div class="sbrk"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg><span>Not sure which app is useful</span></div><div class="sstep">Explores and reads about terms and conditions</div><div class="sbrk"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg><span>Very high commission percentage</span></div><div class="sbrk"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg><span>Doesn't find any app useful for hawkers</span></div></div>
-        <div class="cs-img reveal"><img src="assets/images/stakeholder-map.jpg" alt="Stakeholder map" loading="lazy"/></div>
+        <div class="cs-img reveal"><img src="assets/img-17.jpg" alt="Stakeholder map" loading="lazy"/></div>
       </div>
 
       <div class="cs-section reveal">
@@ -913,18 +1107,18 @@
         <span class="eyebrow">Brand — StreetEats</span>
         <h2>Moodboard &amp; identity</h2>
         <p>This is an application that provides information about local food hawkers to customers and helps them explore different types of street food options in the city.</p>
-        <div class="cs-img reveal"><img src="assets/images/moodboard.jpg" alt="Moodboard" loading="lazy"/></div>
+        <div class="cs-img reveal"><img src="assets/img-18.jpg" alt="Moodboard" loading="lazy"/></div>
       </div>
 
       <div class="cs-section reveal">
         <span class="eyebrow">Final UI</span>
         <h2>High-fidelity prototype</h2>
         <div class="screens-stack">
-          <div class="cs-img reveal"><img src="assets/images/high-fidelity-screens.jpg" alt="High-fidelity screens" loading="lazy"/></div>
-          <div class="cs-img reveal"><img src="assets/images/high-fidelity-screens-2.jpg" alt="High-fidelity screens" loading="lazy"/></div>
-          <div class="cs-img reveal"><img src="assets/images/high-fidelity-screens-3.jpg" alt="High-fidelity screens" loading="lazy"/></div>
-          <div class="cs-img reveal"><img src="assets/images/high-fidelity-screens-4.jpg" alt="High-fidelity screens" loading="lazy"/></div>
-          <div class="cs-img reveal"><img src="assets/images/high-fidelity-screens-5.jpg" alt="High-fidelity screens" loading="lazy"/></div>
+          <div class="cs-img reveal"><img src="assets/img-19.jpg" alt="High-fidelity screens" loading="lazy"/></div>
+          <div class="cs-img reveal"><img src="assets/img-20.jpg" alt="High-fidelity screens" loading="lazy"/></div>
+          <div class="cs-img reveal"><img src="assets/img-21.jpg" alt="High-fidelity screens" loading="lazy"/></div>
+          <div class="cs-img reveal"><img src="assets/img-22.jpg" alt="High-fidelity screens" loading="lazy"/></div>
+          <div class="cs-img reveal"><img src="assets/img-23.jpg" alt="High-fidelity screens" loading="lazy"/></div>
         </div>
       </div>
 
@@ -933,6 +1127,18 @@
         <h2>Interactive demo</h2>
         <p>A placeholder for the clickable prototype — drop your Figma or Framer embed here so visitors can walk the StreetEats flow.</p>
         <div class="ph demo-ph"><span class="play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></span><span class="ph-label">Prototype demo — embed placeholder</span></div>
+      </div>
+
+        </div>
+      </div>
+
+      <div class="cs-lookback reveal">
+        <div class="section-head"><span class="eyebrow">Reflection</span><h2 style="font-size:clamp(22px,2.6vw,30px)">Looking back</h2></div>
+        <div class="lb-grid">
+          <div class="lb"><p class="lb-k">What worked</p><p>Framing the problem as irregular presence (not food quality) pointed straight to real-time location as the backbone of the app.</p></div>
+          <div class="lb"><p class="lb-k">What I would change</p><p>I would validate the two-sided model with actual hawkers and customers, since the concept currently rests on secondary and contextual research rather than live testing.</p></div>
+          <div class="lb"><p class="lb-k">What I would explore next</p><p>How real-time location and notifications behave at scale &mdash; keeping discovery useful without overwhelming customers with alerts.</p></div>
+        </div>
       </div>
 
       <div class="prevnext">
@@ -959,12 +1165,50 @@
         <div class="m"><div class="k">Type</div><div class="v">Internal design system</div></div>
         <div class="m"><div class="k">Access</div><div class="v">Under NDA</div></div>
       </div>
-      <div class="cs-cover reveal d3"><img src="assets/images/design-system-cover.jpg" alt="Design system cover" style="width:100%;height:100%;object-fit:cover"/></div>
+      <div class="cs-cover reveal d3"><img src="assets/img-24.jpg" alt="Design system cover" style="width:100%;height:100%;object-fit:cover"/></div>
     </div>
   </div>
 
   <div class="container">
     <div class="cs-body">
+
+            <div class="glance reveal">
+<div class="g-problem">
+          <p class="g-eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 1v3M12 20v3M1 12h3M20 12h3"/></svg>The problem</p>
+          <p class="g-stmt">Teams needed a single source of truth &mdash; consistent components, clear foundations, and guidance that made the right choice the easy one &mdash; to build the dashboard faster and more consistently.</p>
+        </div>
+        <div class="g-body">
+          <div class="g-insight">
+            <p class="gi-tag">Key insight <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg></p>
+            <p class="gi-lead">Consistency at speed comes from <strong>documentation, not just components</strong>.</p>
+            <p class="gi-ev">Guidance that makes the right choice the easy one is what lets teams build from a shared language.</p>
+          </div>
+          <div class="g-decisions">
+            <p class="gd-h">Key design decisions</p>
+            <div class="g-dec"><div class="gd-n">01</div><div><p class="gd-d">Sequence the system deliberately: <strong>Discovery &rarr; Audit &rarr; Foundations &rarr; Components &rarr; Documentation &rarr; Implementation</strong>.</p></div></div><div class="g-dec"><div class="gd-n">02</div><div><p class="gd-d">Document each component <strong>three ways</strong> and ground everything in shared foundations (colours, typography, spacing, grids).</p></div></div>
+          </div>
+        </div>
+        <div class="g-outcome">
+          <p class="go-tag">Outcome &amp; learning</p>
+          <p class="go-stmt">A documented, reusable foundation &mdash; colours, buttons, data-visualisation, tables, backgrounds and navigation &mdash; that keeps the dashboard consistent and gives designers and engineers a shared language to build from.</p>
+        </div>
+      </div>
+
+      <div class="cs-changed reveal">
+        <div class="section-head"><span class="eyebrow">Outcomes</span><h2 style="font-size:clamp(22px,2.6vw,30px)">What changed</h2></div>
+        <div class="wc-grid"><div class="wc"><span class="wc-tag">Shipped</span><p>A <strong>documented, reusable foundation</strong> &mdash; colours, buttons, data-visualisation, tables, backgrounds and navigation &mdash; built in Figma and handed off to engineering.</p></div><div class="wc"><span class="wc-tag">Improved</span><p>A <strong>shared language</strong> that keeps the dashboard consistent and lets designers and engineers build faster from the same source of truth.</p></div><div class="wc"><span class="wc-tag">Learned</span><p>Consistency at speed comes from <strong>documentation, not just components</strong> &mdash; guidance that makes the right choice the easy one.</p></div></div>
+      </div>
+
+      <div class="process-gate" id="pgate-3">
+        <p class="pg-eyebrow">Curious how I got there?</p>
+        <h2>The research, explorations and iterations behind the final experience.</h2>
+        <button type="button" class="process-toggle" aria-expanded="false" aria-controls="pdeep-3" data-ptoggle>
+          <span class="pt-label">Explore the process</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+      </div>
+      <div class="process-deep" id="pdeep-3" hidden>
+        <div class="pd-inner">
 
       <div class="cs-section reveal">
         <span class="eyebrow">Overview</span>
@@ -1002,6 +1246,18 @@
         <p>The result is a documented, reusable foundation — colours, buttons, data-visualisation, tables, backgrounds, and navigation — that keeps the dashboard consistent and gives designers and engineers a shared language to build from.</p>
       </div>
 
+        </div>
+      </div>
+
+      <div class="cs-lookback reveal">
+        <div class="section-head"><span class="eyebrow">Reflection</span><h2 style="font-size:clamp(22px,2.6vw,30px)">Looking back</h2></div>
+        <div class="lb-grid">
+          <div class="lb"><p class="lb-k">What worked</p><p>Sequencing the work Discovery &rarr; Audit &rarr; Foundations &rarr; Components &rarr; Documentation &rarr; Implementation kept the system grounded and usable.</p></div>
+          <div class="lb"><p class="lb-k">What I would change</p><p>Under NDA the outcomes here are qualitative; I would build in adoption checkpoints with engineering to see how well the documentation held up in practice.</p></div>
+          <div class="lb"><p class="lb-k">What I would explore next</p><p>How the system evolves once teams use it &mdash; governance, versioning, and keeping documentation as the single source of truth over time.</p></div>
+        </div>
+      </div>
+
       <div class="prevnext">
         <div class="pn prev" data-nav="#case-streeteats"><div class="dir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="transform:scaleX(-1)"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Previous</div><h4>StreetEats</h4></div>
         <div class="pn next" data-nav="#work" data-tab="ux"><div class="dir">Next<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div><h4>All UX work</h4></div>
@@ -1025,14 +1281,52 @@
         <div class="m"><div class="k">Primary user</div><div class="v">Fleet managers</div></div>
         <div class="m"><div class="k">Type</div><div class="v">Product UX case study</div></div>
       </div>
-      <div class="cs-cover reveal d3"><img src="assets/images/navitrax-cover.jpg" alt="NAVITRAX cover" style="width:100%;height:100%;object-fit:cover"/></div>
+      <div class="cs-cover reveal d3"><img src="assets/img-25.jpg" alt="NAVITRAX cover" style="width:100%;height:100%;object-fit:cover"/></div>
     </div>
   </div>
 
   <div class="container">
     <div class="cs-body">
 
-      <div class="cs-section reveal">
+                  <div class="glance reveal">
+<div class="g-problem">
+          <p class="g-eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 1v3M12 20v3M1 12h3M20 12h3"/></svg>The problem</p>
+          <p class="g-stmt">Fleet managers firefight from scattered spreadsheets and delayed updates, making it hard to track fleet movement, reduce fuel costs and monitor driver behaviour.</p>
+        </div>
+        <div class="g-body">
+          <div class="g-insight">
+            <p class="gi-tag">Key insight <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg></p>
+            <p class="gi-lead">The need isn't more data, it's <strong>timely, consolidated visibility</strong> that lets managers act before problems escalate.</p>
+            <p class="gi-ev">Framed around Harpal, a 48-year-old truck fleet manager.</p>
+          </div>
+          <div class="g-decisions">
+            <p class="gd-h">Key design decisions</p>
+            <div class="g-dec"><div class="gd-n">01</div><div><p class="gd-d">Replace scattered spreadsheets with a single dashboard offering <strong>real-time visibility, live tracking, AI analytics and instant alerts</strong>.</p></div></div><div class="g-dec"><div class="gd-n">02</div><div><p class="gd-d">Bring the fleet map, vehicles, drivers, maintenance, analytics, alerts and reports together with <strong>updated ETAs and status at a glance</strong>.</p></div></div>
+          </div>
+        </div>
+        <div class="g-outcome">
+          <p class="go-tag">Outcome &amp; learning</p>
+          <p class="go-stmt">A consolidated control surface &mdash; "all my fleet, running smoothly" &mdash; that supports smarter, timely decisions.</p>
+        </div>
+      </div>
+
+      <div class="cs-changed reveal">
+        <div class="section-head"><span class="eyebrow">Outcomes</span><h2 style="font-size:clamp(22px,2.6vw,30px)">What changed</h2></div>
+        <div class="wc-grid"><div class="wc"><span class="wc-tag">Shipped</span><p>A <strong>consolidated dashboard</strong> bringing together the fleet map, vehicles, drivers, maintenance, AI analytics, alerts and reports.</p></div><div class="wc"><span class="wc-tag">Improved</span><p>Replaces <strong>scattered spreadsheets and delayed updates</strong> with real-time visibility, live tracking and at-a-glance ETAs and status.</p></div><div class="wc"><span class="wc-tag">Learned</span><p>For a manager like Harpal the need isn&rsquo;t more data &mdash; it&rsquo;s <strong>timely, consolidated visibility</strong> to act before problems escalate.</p></div></div>
+      </div>
+
+      <div class="process-gate" id="pgate-4">
+        <p class="pg-eyebrow">Curious how I got there?</p>
+        <h2>The research, explorations and iterations behind the final experience.</h2>
+        <button type="button" class="process-toggle" aria-expanded="false" aria-controls="pdeep-4" data-ptoggle>
+          <span class="pt-label">Explore the process</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+      </div>
+      <div class="process-deep" id="pdeep-4" hidden>
+        <div class="pd-inner">
+
+<div class="cs-section reveal">
         <span class="eyebrow">Overview</span>
         <h2>From uncertainty to confidence</h2>
         <p>NAVITRAX helps fleet managers stay ahead of their operations. Instead of firefighting from scattered spreadsheets and delayed updates, it offers real-time visibility, live tracking, AI analytics, and instant alerts and notifications — so managers can make smarter, timely decisions and keep operations running smoothly.</p>
@@ -1041,6 +1335,15 @@
       <div class="cs-section reveal">
         <span class="eyebrow">The user</span>
         <h2>Meet Harpal</h2>
+        <div class="decision reveal">
+          <p class="d-tag">Design Decision 01</p>
+          <div class="d-row">
+            <div class="d-col"><p class="dk">What I noticed</p><p class="dv">Harpal was firefighting from scattered spreadsheets and delayed updates, so problems surfaced too late to prevent.</p></div>
+            <div class="d-col"><p class="dk">What I changed</p><p class="dv">Consolidated the fleet map, vehicles, drivers, maintenance, AI analytics and alerts into one dashboard with live tracking and at-a-glance ETAs and status.</p></div>
+            <div class="d-col"><p class="dk">Why</p><p class="dv">Real-time, consolidated visibility is what moves a manager from firefighting to staying ahead &mdash; the core promise of "your fleet, in your control, always."</p></div>
+          </div>
+        </div>
+
         <p>Harpal is a 48-year-old truck fleet manager. His goals: track fleet movement, reduce fuel costs, and monitor driver behaviour. His pain points include difficult agricultural terminology and inaccurate weather and crop predictions.</p>
         <div class="harpal-grid"><div class="hc hc-photo"><div class="av">H</div><div class="nm">Harpal</div></div><div class="hc"><h4>Harpal <small>Truck Fleet Manager</small></h4><div class="hc-sec"><b>Demographics:</b><br>48, male</div><div class="hc-sec"><b>Goals:</b><br>Track fleet movement<br>Reduce fuel costs<br>Monitor driver behavior</div><div class="hc-sec"><b>Pain Points:</b><br>Difficult agricultural terminology<br>Inaccurate weather and crop predictions</div></div><div class="hc"><h4>Scenario</h4><p>Harpal manages logistics through a dashboard but struggles with delayed alerts and poor data interpretation.</p></div><div class="hc hc-accent"><h4>UX Problems</h4><ol><li>Complex fleet dashboards</li><li>Difficult report generation</li><li>Poor alert prioritization</li><li>Multi-device inconsistency</li></ol></div><div class="hc hc-accent"><h4>UI Problems</h4><ol><li>Information overload</li><li>Small charts and graphs</li><li>Weak visual hierarchy</li><li>Non-intuitive controls</li></ol></div><div class="hc hc-accent"><h4>CX Problems</h4><ol><li>Distrust in tracking accuracy</li><li>Operational stress</li><li>Frustration from delayed insights</li><li>Weak support responsiveness</li></ol></div><div class="hc hc-accent"><h4>AI Problems</h4><ol><li>Inaccurate predictive maintenance</li><li>Weak route optimization</li><li>False anomaly detection</li><li>Poor driver risk assessment</li></ol></div></div>
       </div>
@@ -1056,7 +1359,7 @@
         <span class="eyebrow">The journey</span>
         <h2>Harpal's journey: from uncertainty to confidence</h2>
         <p>The challenge, the struggle, and the discovery — how too much to manage and scattered data gave way to one platform that shows where things are and what needs attention.</p>
-        <div class="cs-img reveal"><img src="assets/images/harpal-journey-challenge-struggle-discovery.jpg" alt="Harpal&apos;s journey — challenge, struggle, discovery" loading="lazy"/></div>
+        <div class="cs-img reveal"><img src="assets/img-26.jpg" alt="Harpal&apos;s journey — challenge, struggle, discovery" loading="lazy"/></div>
       </div>
 
       <div class="cs-section reveal">
@@ -1078,23 +1381,35 @@
         <span class="eyebrow">Positioning</span>
         <h2>The promise</h2>
         <p>All my fleet. Running smoothly. Real-time visibility, smarter decisions, better outcomes — your fleet, in your control, always.</p>
-        <div class="cs-img reveal"><img src="assets/images/positioning-and-value-proposition.jpg" alt="Positioning &amp; value proposition" loading="lazy"/></div>
+        <div class="cs-img reveal"><img src="assets/img-27.jpg" alt="Positioning &amp; value proposition" loading="lazy"/></div>
       </div>
 
       <div class="cs-section reveal">
         <span class="eyebrow">Visual direction</span>
         <h2>Brand &amp; colour theme</h2>
         <p>A colour theme that blends trust, intelligence, urgency, and optimism — empowering fleet managers to make faster decisions with confidence.</p>
-        <div class="cs-img reveal"><img src="assets/images/brand-and-colour-theme.jpg" alt="Brand &amp; colour theme" loading="lazy"/></div>
+        <div class="cs-img reveal"><img src="assets/img-28.jpg" alt="Brand &amp; colour theme" loading="lazy"/></div>
       </div>
 
       <div class="cs-section reveal">
         <span class="eyebrow">Final UI</span>
         <h2>NAVITRAX in use</h2>
         <p>The dashboard brings together the fleet map, vehicles, drivers, maintenance, AI analytics, alerts, and reports — with updated ETAs and status updates at a glance.</p>
-        <div class="cs-img reveal"><img src="assets/images/app-screens.jpg" alt="App screens" loading="lazy"/></div>
-        <div class="cs-img reveal"><img src="assets/images/navitrax-dashboard.jpg" alt="NAVITRAX dashboard" loading="lazy"/></div>
-        <div class="cs-img reveal"><img src="assets/images/navitrax-screens-service-analytics-alerts.jpg" alt="NAVITRAX screens — service, analytics, alerts" loading="lazy"/></div>
+        <div class="cs-img reveal"><img src="assets/img-29.jpg" alt="App screens" loading="lazy"/></div>
+        <div class="cs-img reveal"><img src="assets/img-30.jpg" alt="NAVITRAX dashboard" loading="lazy"/></div>
+        <div class="cs-img reveal"><img src="assets/img-31.jpg" alt="NAVITRAX screens — service, analytics, alerts" loading="lazy"/></div>
+      </div>
+
+        </div>
+      </div>
+
+      <div class="cs-lookback reveal">
+        <div class="section-head"><span class="eyebrow">Reflection</span><h2 style="font-size:clamp(22px,2.6vw,30px)">Looking back</h2></div>
+        <div class="lb-grid">
+          <div class="lb"><p class="lb-k">What worked</p><p>Anchoring the product to Harpal&rsquo;s reality &mdash; firefighting from spreadsheets &mdash; made the case for one real-time control surface obvious.</p></div>
+          <div class="lb"><p class="lb-k">What I would change</p><p>The work leads with a single persona; I would broaden it to other fleet roles to confirm the dashboard priorities hold beyond the manager&rsquo;s view.</p></div>
+          <div class="lb"><p class="lb-k">What I would explore next</p><p>How AI analytics and alerts can move from reporting to prediction &mdash; helping managers stay ahead rather than react.</p></div>
+        </div>
       </div>
 
       <div class="prevnext">
@@ -1117,12 +1432,49 @@
       <div class="m"><div class="k">Primary user</div><div class="v">Elderly citizens</div></div>
       <div class="m"><div class="k">Type</div><div class="v">UX case study</div></div>
     </div>
-    <div class="cs-cover reveal d3"><img src="assets/images/safar-sathi-cover.jpg" alt="Safar Sathi cover" style="width:100%;height:100%;object-fit:cover"/></div>
+    <div class="cs-cover reveal d3"><img src="assets/img-32.jpg" alt="Safar Sathi cover" style="width:100%;height:100%;object-fit:cover"/></div>
   </div></div>
 
   <div class="container"><div class="cs-body">
 
-    <div class="cs-section reveal"><span class="eyebrow">About the project</span><h2>Problem statement</h2>
+              <div class="glance reveal">
+<div class="g-problem">
+          <p class="g-eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 1v3M12 20v3M1 12h3M20 12h3"/></svg>The problem</p>
+          <p class="g-stmt">Despite advances in transport, the elderly face significant challenges on public buses &mdash; from accessibility issues to the lack of a tailored planning system &mdash; especially when travelling alone.</p>
+        </div>
+        <div class="g-body">
+          <div class="g-insight">
+            <p class="gi-tag">Key insight <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg></p>
+            <p class="gi-lead">Three gaps define the experience &mdash; <strong>information &amp; guidance, safety &amp; security, and accessibility</strong> &mdash; not one problem, but a chain of them across a journey.</p>
+          </div>
+          <div class="g-decisions">
+            <p class="gd-h">Key design decisions</p>
+            <div class="g-dec"><div class="gd-n">01</div><div><p class="gd-d">Address the journey end-to-end &mdash; planning, boarding and fare understanding &mdash; rather than a single screen, since interviews surfaced friction at each step (seating, boarding/disembarking, fare structure).</p></div></div><div class="g-dec"><div class="gd-n">02</div><div><p class="gd-d">Design for <strong>accessibility and reassurance</strong> as first-class requirements, reflected in components, styleguide and micro-interactions.</p></div></div>
+          </div>
+        </div>
+        <div class="g-outcome">
+          <p class="go-tag">Outcome &amp; learning</p>
+          <p class="go-stmt">An accessible, guidance-led travel companion concept grounded in a literature review and interviews.</p>
+        </div>
+      </div>
+
+      <div class="cs-changed reveal">
+        <div class="section-head"><span class="eyebrow">Outcomes</span><h2 style="font-size:clamp(22px,2.6vw,30px)">What changed</h2></div>
+        <div class="wc-grid"><div class="wc"><span class="wc-tag">Learned</span><p class="wc-metric">25 articles reviewed</p><p>A literature review and interviews surfaced <strong>three gaps</strong> &mdash; information &amp; guidance, safety &amp; security, and accessibility &mdash; not one problem but a chain across the journey.</p></div><div class="wc"><span class="wc-tag">Improved</span><p>Interviews pinpointed friction at every stage: <strong>limited seating, difficulty boarding/disembarking, and confusion over fare structure</strong>.</p></div><div class="wc"><span class="wc-tag">Shipped</span><p>An <strong>accessible, guidance-led travel companion</strong> concept scoped around the whole journey &mdash; planning, boarding and fares.</p></div></div>
+      </div>
+
+      <div class="process-gate" id="pgate-5">
+        <p class="pg-eyebrow">Curious how I got there?</p>
+        <h2>The research, explorations and iterations behind the final experience.</h2>
+        <button type="button" class="process-toggle" aria-expanded="false" aria-controls="pdeep-5" data-ptoggle>
+          <span class="pt-label">Explore the process</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+      </div>
+      <div class="process-deep" id="pdeep-5" hidden>
+        <div class="pd-inner">
+
+<div class="cs-section reveal"><span class="eyebrow">About the project</span><h2>Problem statement</h2>
       <p>Despite advancements in transportation systems, the elderly face significant challenges while traveling in a public bus transport, ranging from accessibility issues to lack of tailored planning system that will help them in having a more enhanced traveling experience.</p>
       <div class="cs-cards" style="margin-top:22px">
         <div class="c"><h4>Who</h4><p>Elderly citizens</p></div>
@@ -1146,6 +1498,15 @@
     <div class="cs-section reveal"><span class="eyebrow">Interview analysis</span><h2>What we heard</h2><div class="cs-list"><div class="li"><span class="n">1</span><p><b>Limited seating availability:</b> Senior citizens may have difficulty in finding a seat when boarding a bus, as most buses are often crowded and the priority seating areas are usually occupied.</p></div><div class="li"><span class="n">2</span><p><b>Difficulty in boarding & disembarking:</b> Senior citizens may find it difficult to board or disembark from a bus due to their limited mobility, making it difficult for them to climb up the bus steps or reach the aisle.</p></div><div class="li"><span class="n">3</span><p><b>Difficulty in understanding the fare structure:</b> Many senior citizens find it difficult to understand the fare structure of public buses, which can be confusing and overwhelming.</p></div><div class="li"><span class="n">4</span><p><b>Difficulty in hearing the bus driver:</b> Senior citizens may find it difficult to hear the bus driver due to their hearing loss and may miss important announcements or instructions.</p></div><div class="li"><span class="n">5</span><p><b>Difficulty in standing for long periods:</b> Senior citizens may have difficulty standing for long periods of time due to their limited mobility, which can be very uncomfortable and tiring.</p></div><div class="li"><span class="n">6</span><p><b>Confusion about the timetables:</b> Buses arrive late due to which people stand on the bus stops for a very long time. They aren't able to track the position of the buses which leads to confusion.</p></div><div class="li"><span class="n">7</span><p><b>Conductor free service will be preferred:</b> by the old people who cannot hear properly as there won't be any need for communication and interaction.</p></div></div></div>
 
     <div class="cs-section reveal"><span class="eyebrow">Gap observed</span><h2>Three gaps in the current system</h2>
+        <div class="decision reveal">
+          <p class="d-tag">Design Decision 01</p>
+          <div class="d-row">
+            <div class="d-col"><p class="dk">What I noticed</p><p class="dv">Interviews surfaced friction at every stage &mdash; limited seating, difficulty boarding and disembarking, and confusion over fare structure &mdash; not a single failure point.</p></div>
+            <div class="d-col"><p class="dk">What I changed</p><p class="dv">Scoped the app around the whole journey (planning, boarding, fares) with accessibility and guidance built in, rather than optimising one isolated screen.</p></div>
+            <div class="d-col"><p class="dk">Why</p><p class="dv">The three gaps &mdash; information, safety and accessibility &mdash; compound across the trip, so tailored end-to-end guidance is what actually reduces the barrier to travelling alone.</p></div>
+          </div>
+        </div>
+
       <div class="cs-cards">
         <div class="c"><h4>Information &amp; Guidance Deficiency</h4><p>The system lacks adequate tools or resources tailored to the specific needs of elderly travellers. There's a gap in providing real-time information about schedules, route changes, or accessibility features.</p></div>
         <div class="c"><h4>Safety &amp; Security Concerns</h4><p>The absence of dedicated safety features, such as emergency assistance, real-time monitoring, or guidance in case of unexpected situations, creates a significant gap.</p></div>
@@ -1220,6 +1581,18 @@
 
     <div class="cs-section reveal"><span class="eyebrow">Micro-interactions</span><h2>Interaction details</h2><div class="cs-cards" style="grid-template-columns:repeat(3,1fr)"><div class="c"><ol style="margin:0;padding-left:18px"><li style="font-size:13.5px;color:var(--text-2);line-height:1.7">Button animation</li><li style="font-size:13.5px;color:var(--text-2);line-height:1.7">Loading animation</li><li style="font-size:13.5px;color:var(--text-2);line-height:1.7">Checkbox animation</li><li style="font-size:13.5px;color:var(--text-2);line-height:1.7">Dropdown Animations</li><li style="font-size:13.5px;color:var(--text-2);line-height:1.7">Error Messages</li><li style="font-size:13.5px;color:var(--text-2);line-height:1.7">Success Messages</li><li style="font-size:13.5px;color:var(--text-2);line-height:1.7">Button Shadows</li></ol></div><div class="c"><ol style="margin:0;padding-left:18px"><li style="font-size:13.5px;color:var(--text-2);line-height:1.7">Scrolling Animations</li><li style="font-size:13.5px;color:var(--text-2);line-height:1.7">Pull-to-Refresh Animation</li><li style="font-size:13.5px;color:var(--text-2);line-height:1.7">Rating/Star Animations</li><li style="font-size:13.5px;color:var(--text-2);line-height:1.7">Slider Interactions</li><li style="font-size:13.5px;color:var(--text-2);line-height:1.7">Location Permission Prompt</li><li style="font-size:13.5px;color:var(--text-2);line-height:1.7">Social Media Share Button</li><li style="font-size:13.5px;color:var(--text-2);line-height:1.7">Hover Effects</li></ol></div><div class="c"><ol style="margin:0;padding-left:18px"><li style="font-size:13.5px;color:var(--text-2);line-height:1.7">Content Highlighting</li><li style="font-size:13.5px;color:var(--text-2);line-height:1.7">Response Messages</li><li style="font-size:13.5px;color:var(--text-2);line-height:1.7">Road to go back animation</li><li style="font-size:13.5px;color:var(--text-2);line-height:1.7">Text Highlighting</li></ol></div></div></div>
 
+        </div>
+      </div>
+
+      <div class="cs-lookback reveal">
+        <div class="section-head"><span class="eyebrow">Reflection</span><h2 style="font-size:clamp(22px,2.6vw,30px)">Looking back</h2></div>
+        <div class="lb-grid">
+          <div class="lb"><p class="lb-k">What worked</p><p>Treating the three gaps as a connected journey &mdash; rather than optimising one screen &mdash; matched how the friction actually compounds for elderly travellers.</p></div>
+          <div class="lb"><p class="lb-k">What I would change</p><p>The concept is grounded in literature and interviews; I would move it into usability testing with elderly users to confirm the accessibility choices work in practice.</p></div>
+          <div class="lb"><p class="lb-k">What I would explore next</p><p>Real-time guidance and safety features &mdash; emergency assistance and live information &mdash; that directly close the safety and information gaps identified.</p></div>
+        </div>
+      </div>
+
     <div class="prevnext">
       <div class="pn prev" data-nav="#case-fleet"><div class="dir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="transform:scaleX(-1)"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Previous</div><h4>NAVITRAX</h4></div>
       <div class="pn next" data-nav="#work" data-tab="ux"><div class="dir">Next<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div><h4>All UX work</h4></div>
@@ -1240,16 +1613,63 @@
       <div class="m"><div class="k">Type</div><div class="v">Internal AI tool &middot; Chatbot</div></div>
       <div class="m"><div class="k">Confidentiality</div><div class="v">Under NDA</div></div>
     </div>
-    <div class="cs-cover cs-cover-photo reveal d3"><img src="assets/images/occ-converse-cover.jpg" data-cover-scale="1.09" data-no-parallax alt="OCC Converse open on a laptop, showing the assistant’s question input and quick prompts"/></div>
+    <div class="cs-cover cs-cover-photo reveal d3"><img src="assets/img-33.jpg" data-cover-scale="1.09" data-no-parallax alt="OCC Converse open on a laptop, showing the assistant’s question input and quick prompts"/></div>
   </div></div>
   <div class="container"><div class="cs-body">
-    <div class="cs-section reveal"><span class="eyebrow">About</span><h2>The brief</h2>
+              <div class="glance reveal">
+<div class="g-problem">
+          <p class="g-eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 1v3M12 20v3M1 12h3M20 12h3"/></svg>The problem</p>
+          <p class="g-stmt">Reps needed quick access to relevant deal and account information without switching between multiple tools, and reliable answers they could trust.</p>
+        </div>
+        <div class="g-body">
+          <div class="g-insight">
+            <p class="gi-tag">Key insight <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg></p>
+            <p class="gi-lead">Reps wanted <strong>concise, source-backed answers</strong> &mdash; natural-language retrieval plus clear source references to build confidence in what the AI returns.</p>
+            <p class="gi-ev">From requirements conversations with the sales team.</p>
+          </div>
+          <div class="g-decisions">
+            <p class="gd-h">Key design decisions</p>
+            <div class="g-dec"><div class="gd-n">01</div><div><p class="gd-d">Let reps ask in natural language and return <strong>concise deal summaries</strong> (status, risks, opportunities) at a glance.</p></div></div><div class="g-dec"><div class="gd-n">02</div><div><p class="gd-d">Attach <strong>clear source references</strong> to AI responses so reps can trust and verify the information.</p></div></div>
+          </div>
+        </div>
+        <div class="g-outcome">
+          <p class="go-tag">Outcome &amp; learning</p>
+          <p class="go-stmt">In its 1st release the assistant delivered qualitative wins: increased user productivity, faster decision-making, faster deliveries and reduced context-switching.</p>
+        </div>
+      </div>
+
+      <div class="cs-changed reveal">
+        <div class="section-head"><span class="eyebrow">Outcomes</span><h2 style="font-size:clamp(22px,2.6vw,30px)">What changed</h2></div>
+        <div class="wc-grid"><div class="wc"><span class="wc-tag">Shipped</span><p class="wc-metric">1st release</p><p>The assistant delivered clear, qualitative wins for Adobe&rsquo;s sales team in its first release.</p></div><div class="wc"><span class="wc-tag">Improved</span><p><strong>Increased productivity, faster decision-making, faster deliveries and reduced context-switching</strong> &mdash; one place for deal and account info instead of many tools.</p></div><div class="wc"><span class="wc-tag">Learned</span><p>Reps didn&rsquo;t just want answers &mdash; they needed <strong>concise, source-backed responses</strong> to trust and act on the information.</p></div></div>
+      </div>
+
+      <div class="process-gate" id="pgate-6">
+        <p class="pg-eyebrow">Curious how I got there?</p>
+        <h2>The research, explorations and iterations behind the final experience.</h2>
+        <button type="button" class="process-toggle" aria-expanded="false" aria-controls="pdeep-6" data-ptoggle>
+          <span class="pt-label">Explore the process</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+      </div>
+      <div class="process-deep" id="pdeep-6" hidden>
+        <div class="pd-inner">
+
+<div class="cs-section reveal"><span class="eyebrow">About</span><h2>The brief</h2>
       <p>An AI chatbot for Adobe's internal sales team &mdash; designed to surface deal and account information conversationally, reduce tool-switching, and give reps quick, reliable, source-backed answers.</p>
       <div style="margin-top:16px"><span class="nda-note"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>NDA project &mdash; selected artefacts shown, product UI limited</span></div>
     </div>
     <div class="cs-section reveal"><span class="eyebrow">Process</span><h2>UX process flow</h2><div class="uxproc"><div class="st"><div class="dot">1</div><div class="lb">Understand Users</div></div><div class="st"><div class="dot">2</div><div class="lb">Identify Tasks &amp; Requirements</div></div><div class="st"><div class="dot">3</div><div class="lb">Structure Information</div></div><div class="st"><div class="dot">4</div><div class="lb">Define AI &amp; Product Capabilities</div></div><div class="st"><div class="dot">5</div><div class="lb">Design the Experience</div></div><div class="st"><div class="dot">6</div><div class="lb">Validate &amp; Iterate</div></div></div></div>
     <div class="cs-section reveal"><span class="eyebrow">Ideation</span><h2>Mind mapping</h2><p>Mapping the problem space &mdash; dashboard features, AI capabilities, requirements, daily sales tasks, and user needs &amp; pain points.</p><div class="ss-mm"><div class="center">AI Sales Assistant &mdash; UX Mind Map</div><div class="branches"><div class="br" style="border-top-color:#6b8fb5"><h5>1. Sales Dashboard Features</h5><div class="leaves"><span>Deal Overview</span><span>Deal Status</span><span>Pipeline Visibility</span><span>Opportunity Tracking</span><span>Account Information</span><span>Customer Insights</span><span>Deal History</span><span>Sales Metrics</span><span>Revenue Insights</span><span>Win / Loss Insights</span><span>Recent Activity</span><span>Quick Actions</span></div></div><div class="br" style="border-top-color:#6F7D5C"><h5>2. AI Capabilities</h5><div class="leaves"><span>Natural Language Queries</span><span>Conversational Search</span><span>Deal Q&amp;A</span><span>Contextual Answers</span><span>Follow-up Questions</span><span>Deal Summarization</span><span>Account Summarization</span><span>Information Retrieval</span><span>Suggested Questions</span><span>Smart Recommendations</span><span>Actionable Insights</span><span>Risk Identification</span><span>Source References</span></div></div><div class="br" style="border-top-color:#9B7BB5"><h5>3. Requirements</h5><div class="leaves"><span>Stakeholder Interviews</span><span>User Interviews</span><span>Sales Team Needs</span><span>Business Goals</span><span>User Pain Points</span><span>Existing Workflow</span><span>User Expectations</span><span>Use Cases</span><span>Functional Requirements</span><span>Data Availability</span><span>Privacy</span><span>Success Metrics</span></div></div><div class="br" style="border-top-color:#C08A5B"><h5>4. Daily Sales Tasks</h5><div class="leaves"><span>Check Pipeline</span><span>Review Deals</span><span>Prepare for Meetings</span><span>Research Accounts</span><span>Track Opportunities</span><span>Check Deal Progress</span><span>Identify Risks</span><span>Find Account Information</span><span>Follow-up with Customers</span><span>Update CRM</span><span>Forecast Revenue</span><span>Prioritize Opportunities</span></div></div><div class="br" style="border-top-color:#C77B9E"><h5>5. User Needs &amp; Pain Points</h5><div class="leaves"><span>Faster Information Access</span><span>Scattered Deal Information</span><span>Too Many Tools</span><span>Complex CRM Navigation</span><span>Time-Consuming Search</span></div></div></div></div></div>
-    <div class="cs-section reveal"><span class="eyebrow">Primary research</span><h2>What we heard</h2><p>Key inputs from requirements-gathering conversations with the sales team.</p><div class="cs-cards" style="grid-template-columns:1fr 1fr"><div class="c"><p style="font-size:13.5px;color:var(--text-2);line-height:1.5;margin:0">Sales teams needed quick access to relevant deal and account information without navigating multiple tools.</p></div><div class="c"><p style="font-size:13.5px;color:var(--text-2);line-height:1.5;margin:0">Asking questions in natural language will help retrieve clear and contextual answers about deals.</p></div><div class="c"><p style="font-size:13.5px;color:var(--text-2);line-height:1.5;margin:0">Concise deal summaries were needed to understand status, risks, and opportunities at a glance.</p></div><div class="c"><p style="font-size:13.5px;color:var(--text-2);line-height:1.5;margin:0">Reliable AI responses with clear source references were required to build confidence in the information provided.</p></div></div></div>
+    <div class="cs-section reveal"><span class="eyebrow">Primary research</span><h2>What we heard</h2>
+        <div class="decision reveal">
+          <p class="d-tag">Design Decision 01</p>
+          <div class="d-row">
+            <div class="d-col"><p class="dk">What I noticed</p><p class="dv">Reps didn't just want answers &mdash; requirements conversations showed they needed to trust them, and were losing time switching between multiple tools.</p></div>
+            <div class="d-col"><p class="dk">What I changed</p><p class="dv">Designed responses as concise deal summaries with clear source references, retrieved through natural-language questions in one place.</p></div>
+            <div class="d-col"><p class="dk">Why</p><p class="dv">Source-backed, contextual answers build the confidence reps need to act, while consolidating tools directly reduces the context-switching that slowed them down.</p></div>
+          </div>
+        </div>
+<p>Key inputs from requirements-gathering conversations with the sales team.</p><div class="cs-cards" style="grid-template-columns:1fr 1fr"><div class="c"><p style="font-size:13.5px;color:var(--text-2);line-height:1.5;margin:0">Sales teams needed quick access to relevant deal and account information without navigating multiple tools.</p></div><div class="c"><p style="font-size:13.5px;color:var(--text-2);line-height:1.5;margin:0">Asking questions in natural language will help retrieve clear and contextual answers about deals.</p></div><div class="c"><p style="font-size:13.5px;color:var(--text-2);line-height:1.5;margin:0">Concise deal summaries were needed to understand status, risks, and opportunities at a glance.</p></div><div class="c"><p style="font-size:13.5px;color:var(--text-2);line-height:1.5;margin:0">Reliable AI responses with clear source references were required to build confidence in the information provided.</p></div></div></div>
     <div class="cs-section reveal"><span class="eyebrow">Design system</span><h2>Designed the experience</h2>
       <p>Instead of designing a fixed chatbot interface, I designed a flexible <strong>response system</strong> that could adapt to different user needs, intents, and levels of information.</p>
       <ol class="artefacts">
@@ -1292,38 +1712,31 @@
         <ol class="chain"><li><b>Style guide</b></li><li><b>Components</b></li><li><b>Response compositions</b></li><li><b>High-fidelity</b></li></ol>
         <h3 class="dsub" style="margin-top:26px">Style guide &mdash; "Aurora Glass"</h3>
         <p style="font-size:15.5px;margin-top:8px">The visual system behind the Sales Copilot experience: frosted-glass surfaces layered over a soft gradient backdrop, anchored by a single indigo&rarr;violet accent. It favours quiet, information-dense screens where the data leads and the chrome stays out of the way.</p>
-        <div class="dspal" style="margin-top:16px">
-          <div><h5>Accent (purple)</h5><div class="swrow">
-            <div class="sw2"><div class="c" style="background:#7558EF"></div><div class="hx">#7558EF</div><div class="rl">Accent</div></div>
-            <div class="sw2"><div class="c" style="background:#6D5FD0"></div><div class="hx">#6D5FD0</div><div class="rl">Accent hover</div></div>
-            <div class="sw2"><div class="c" style="background:#5B4FC9"></div><div class="hx">#5B4FC9</div><div class="rl">Accent deep</div></div>
-          </div></div>
-          <div><h5>Status</h5><div class="swrow">
-            <div class="sw2"><div class="c" style="background:#2F9E75"></div><div class="hx">#2F9E75</div><div class="rl">Positive</div></div>
-            <div class="sw2"><div class="c" style="background:#438E76"></div><div class="hx">#438E76</div><div class="rl">Positive ink</div></div>
-            <div class="sw2"><div class="c" style="background:#9A682D"></div><div class="hx">#9A682D</div><div class="rl">Warning</div></div>
-            <div class="sw2"><div class="c" style="background:#C23F52"></div><div class="hx">#C23F52</div><div class="rl">Negative</div></div>
-            <div class="sw2"><div class="c" style="background:#BE5565"></div><div class="hx">#BE5565</div><div class="rl">Negative ink</div></div>
-          </div></div>
-          <div><h5>Greys &amp; blacks (ink / neutrals)</h5><div class="swrow">
-            <div class="sw2"><div class="c" style="background:#20233A"></div><div class="hx">#20233A</div><div class="rl">Ink 900</div></div>
-            <div class="sw2"><div class="c" style="background:#3B3F54"></div><div class="hx">#3B3F54</div><div class="rl">Ink 700</div></div>
-            <div class="sw2"><div class="c" style="background:#40435A"></div><div class="hx">#40435A</div><div class="rl">Ink 600</div></div>
-            <div class="sw2"><div class="c" style="background:#6F7283"></div><div class="hx">#6F7283</div><div class="rl">Muted 500</div></div>
-            <div class="sw2"><div class="c" style="background:#8A8EA2"></div><div class="hx">#8A8EA2</div><div class="rl">Muted 400</div></div>
-            <div class="sw2"><div class="c" style="background:#9A9FB4"></div><div class="hx">#9A9FB4</div><div class="rl">Muted 300</div></div>
-          </div></div>
-        </div>
+        <p style="font-size:13.5px;margin-top:6px;color:var(--text-2)">A neutral, high-legibility base with one accent family and two semantic signals. Colour is used sparingly &mdash; most of the interface is ink on glass.</p>
+        <div class="dspal" style="margin-top:16px"><div><p class="grp-label">Brand &amp; accent</p><div class="swspec"><div class="swc"><div class="chip" style="background:#7558EF"></div><div class="meta"><p class="nm">Accent</p><p class="hx">#7558EF</p><p class="ds">Primary actions, links, active state.</p></div></div><div class="swc"><div class="chip" style="background:#6D5FD0"></div><div class="meta"><p class="nm">Accent hover</p><p class="hx">#6D5FD0</p><p class="ds">Icon &amp; hover accents, saved state.</p></div></div><div class="swc"><div class="chip" style="background:#5B4FC9"></div><div class="meta"><p class="nm">Accent deep</p><p class="hx">#5B4FC9</p><p class="ds">Pressed / selected text on light.</p></div></div><div class="swc"><div class="chip" style="background:linear-gradient(135deg,#6D7CF7,#8A6CF0)"></div><div class="meta"><p class="nm">CTA gradient</p><p class="hx">#6D7CF7 &rarr; #8A6CF0</p><p class="ds">Primary buttons, confirm, active chips.</p></div></div><div class="swc"><div class="chip" style="background:linear-gradient(135deg,#C7D2FF,#C2B8EE)"></div><div class="meta"><p class="nm">Soft brand</p><p class="hx">#C7D2FF &rarr; #C2B8EE</p><p class="ds">Low-emphasis brand CTA (New Chat).</p></div></div></div></div><div><p class="grp-label">Semantic</p><div class="swspec"><div class="swc"><div class="chip" style="background:#2F9E75"></div><div class="meta"><p class="nm">Positive</p><p class="hx">#2F9E75 &middot; ink #438E76</p><p class="ds">Gains, inflow, +values, up-vote.</p></div></div><div class="swc"><div class="chip" style="background:#C23F52"></div><div class="meta"><p class="nm">Negative</p><p class="hx">#C23F52 &middot; ink #BE5565</p><p class="ds">Losses, slippage, &minus;values.</p></div></div><div class="swc"><div class="chip" style="background:rgba(220,247,242,1);border-bottom:1px solid var(--border)"></div><div class="meta"><p class="nm">Positive tint</p><p class="hx">rgba(220,247,242)</p><p class="ds">Teal pill background (time window).</p></div></div></div></div><div><p class="grp-label">Ink &amp; neutrals</p><div class="swspec"><div class="swc"><div class="chip" style="background:#20233A"></div><div class="meta"><p class="nm">Ink 900</p><p class="hx">#20233A</p><p class="ds">Headings, metric figures.</p></div></div><div class="swc"><div class="chip" style="background:#3B3F54"></div><div class="meta"><p class="nm">Ink 700</p><p class="hx">#3B3F54</p><p class="ds">Nav labels, strong body.</p></div></div><div class="swc"><div class="chip" style="background:#6F7283"></div><div class="meta"><p class="nm">Muted 500</p><p class="hx">#6F7283</p><p class="ds">Secondary body copy.</p></div></div><div class="swc"><div class="chip" style="background:#8A8EA2"></div><div class="meta"><p class="nm">Muted 400</p><p class="hx">#8A8EA2</p><p class="ds">Meta text, period chip.</p></div></div><div class="swc"><div class="chip" style="background:#9A9FB4"></div><div class="meta"><p class="nm">Muted 300</p><p class="hx">#9A9FB4</p><p class="ds">Section labels, placeholders.</p></div></div><div class="swc"><div class="chip" style="background:#E9EAEE;border-bottom:1px solid var(--border)"></div><div class="meta"><p class="nm">Divider</p><p class="hx">rgba(78,84,112,.14)</p><p class="ds">Hairline separators.</p></div></div></div></div></div>
       </div>
     </div>
     <div class="cs-section reveal"><span class="eyebrow">Design</span><h2>From wireframes to hi-fi</h2><span class="nda-note" style="margin-bottom:10px"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Under NDA &mdash; representative frames shown</span><h3 class="dsub">High-fidelity screens</h3><p style="font-size:13.5px;color:var(--text-2);margin:6px 0 0">The polished chat + insight experience.</p><figure class="hifi">
         <div class="hifi-frames">
-          <img src="assets/images/occ-converse-landing-screen.jpg" width="1400" height="736" loading="lazy" alt="OCC Converse landing screen: sidebar with saved prompts and history, a natural-language question field, and quick prompts for adoption, data quality and cross-geo analysis"/>
-          <img src="assets/images/occ-converse-pipeline-movement.jpg" width="1400" height="735" loading="lazy" alt="Pipeline movement answer: a −$5.9M net change headline, movement-type cards for booked, added, progressed, slipped, stalled and left-pipe deals, and a deal list table"/>
+          
+          <img src="assets/img-34.jpg" width="1400" height="736" loading="lazy" alt="OCC Converse landing screen: sidebar with saved prompts and history, a natural-language question field, and quick prompts for adoption, data quality and cross-geo analysis"/>
+          <img src="assets/img-35.jpg" width="1400" height="735" loading="lazy" alt="Pipeline movement answer: a −$5.9M net change headline, movement-type cards for booked, added, progressed, slipped, stalled and left-pipe deals, and a deal list table"/>
         </div>
         <figcaption>Selected screens. Full flows are under NDA.</figcaption>
       </figure></div>
-    <div class="cs-section reveal"><span class="eyebrow">Outcome</span><h2>Business impact</h2><p>Even under NDA, the assistant delivered clear, qualitative wins for the sales team.</p><div class="impact-grid"><div class="impact"><span class="ii"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg></span><h4>Increased user productivity</h4><p>Reps spend less time hunting for information and more time selling.</p></div><div class="impact"><span class="ii"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg></span><h4>Faster decision-making</h4><p>Instant, source-backed answers help reps act with confidence.</p></div><div class="impact"><span class="ii"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></span><h4>Faster deliveries</h4><p>Quicker prep and follow-ups keep deals moving without delays.</p></div><div class="impact"><span class="ii"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></span><h4>Reduced context-switching</h4><p>One place for deal and account info, instead of jumping between tools.</p></div></div></div>
+    <div class="cs-section reveal"><span class="eyebrow">Outcome</span><h2>Business impact</h2><p>Even under NDA, the assistant delivered clear, qualitative wins for the sales team in its 1st release.</p><div class="impact-grid"><div class="impact"><span class="ii"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg></span><h4>Increased user productivity</h4><p>Reps spend less time hunting for information and more time selling.</p></div><div class="impact"><span class="ii"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg></span><h4>Faster decision-making</h4><p>Instant, source-backed answers help reps act with confidence.</p></div><div class="impact"><span class="ii"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></span><h4>Faster deliveries</h4><p>Quicker prep and follow-ups keep deals moving without delays.</p></div><div class="impact"><span class="ii"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></span><h4>Reduced context-switching</h4><p>One place for deal and account info, instead of jumping between tools.</p></div></div></div>
+        </div>
+      </div>
+
+      <div class="cs-lookback reveal">
+        <div class="section-head"><span class="eyebrow">Reflection</span><h2 style="font-size:clamp(22px,2.6vw,30px)">Looking back</h2></div>
+        <div class="lb-grid">
+          <div class="lb"><p class="lb-k">What worked</p><p>Designing responses as concise, source-referenced deal summaries answered the real need &mdash; trust &mdash; and consolidating tools cut context-switching.</p></div>
+          <div class="lb"><p class="lb-k">What I would change</p><p>Impact here is qualitative and under NDA; I would define measurable success criteria (time-to-answer, adoption) to track the wins quantitatively.</p></div>
+          <div class="lb"><p class="lb-k">What I would explore next</p><p>Extending the component system and response logic so the assistant handles more scenarios reliably while keeping source references clear.</p></div>
+        </div>
+      </div>
+
     <div class="prevnext">
       <div class="pn prev" data-nav="#case-safar"><div class="dir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="transform:scaleX(-1)"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Previous</div><h4>Safar Sathi</h4></div>
       <div class="pn next" data-nav="#work" data-tab="ux"><div class="dir">Next<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div><h4>All UX work</h4></div>
@@ -1359,6 +1772,6 @@
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="app.js" defer></script>
 </body>
 </html>

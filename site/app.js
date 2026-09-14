@@ -2,13 +2,13 @@
    DATA
    ============================================================ */
 const UX = [
-  {t:"TinyTots Hub: AI-Powered Daycare Intelligence",year:"2024",sub:"",tags:["Toddlers Growth","AI","Dashboard"],img:"assets/images/tinytots-hub-cover-image.jpg"},
-  {t:"Saral Pay: A voice-first digital payment companion",year:"2026",sub:"IIT Delhi Capstone Project • FinTech & Financial Inclusion",case:"#case-saathi",tags:["Digital Payments","AI Companion","Dashboard"],img:"assets/images/saral-pay-cover.jpg"},
-  {t:"StreetEats: An app connecting people with food hawkers",sub:"SDG 9 · Connecting hawkers & customers",case:"#case-streeteats",tags:["Location","Discovery","Mobile App"],img:"assets/images/streeteats-cover-illustration.jpg"},
-  {t:"Design System for an internal Adobe dashboard",sub:"Design Systems · Figma · Under NDA",case:"#case-designsystem",tags:["Design System","Components","Figma"],img:"assets/images/design-system-cover.jpg"},
-  {t:"NAVITRAX: A fleet management platform",sub:"Fleet management · Product UX",case:"#case-fleet",tags:["Fleet Management","Dashboard","Product UX"],img:"assets/images/navitrax-cover.jpg"},
-  {t:"Safar Sathi: A transit companion for elderly bus journeys",sub:"SDG 9 · Accessibility · AI-driven mobile app",case:"#case-safar",tags:["Accessibility","Public Transit","Mobile App"],img:"assets/images/safar-sathi-cover.jpg"},
-  {t:"AI Sales Assistant: an internal chatbot for Adobe's sales team",sub:"AI · Enterprise UX · Under NDA",case:"#case-salesai",tags:["AI","Enterprise","Chatbot"],img:"assets/images/ai-sales-assistant-cover.jpg"},
+  {t:"TinyTots Hub: AI-Powered Daycare Intelligence",year:"2024",sub:"",tags:["Toddlers Growth","AI","Dashboard"],img:"assets/img-04.jpg"},
+  {t:"Saral Pay: A voice-first digital payment companion",year:"2026",sub:"IIT Delhi Capstone Project • FinTech & Financial Inclusion",case:"#case-saathi",tags:["Digital Payments","AI Companion","Dashboard"],img:"assets/img-09.jpg"},
+  {t:"StreetEats: An app connecting people with food hawkers",sub:"SDG 9 · Connecting hawkers & customers",case:"#case-streeteats",tags:["Location","Discovery","Mobile App"],img:"assets/img-16.jpg"},
+  {t:"Design System for an internal Adobe dashboard",sub:"Design Systems · Figma · Under NDA",case:"#case-designsystem",tags:["Design System","Components","Figma"],img:"assets/img-24.jpg"},
+  {t:"NAVITRAX: A fleet management platform",sub:"Fleet management · Product UX",case:"#case-fleet",tags:["Fleet Management","Dashboard","Product UX"],img:"assets/img-25.jpg"},
+  {t:"Safar Sathi: A transit companion for elderly bus journeys",sub:"SDG 9 · Accessibility · AI-driven mobile app",case:"#case-safar",tags:["Accessibility","Public Transit","Mobile App"],img:"assets/img-32.jpg"},
+  {t:"AI Sales Assistant: an internal chatbot for Adobe's sales team",sub:"AI · Enterprise UX · Under NDA",case:"#case-salesai",tags:["AI","Enterprise","Chatbot"],img:"assets/img-36.jpg"},
 ];
 const VISUAL = [
   {t:"Brand identity system",role:"Visual Designer",dur:"6 weeks",ind:"Branding",
@@ -21,15 +21,15 @@ const VISUAL = [
    d:"A bold, typographic poster series for a local design meetup.",tags:["Poster","Typography","Print"],team:false},
 ];
 const ART = [
-  {t:"Beneath the waves",img:"assets/images/art-beneath-the-waves.jpg"},
-  {t:"Eye on you!",img:"assets/images/art-eye-on-you.jpg"},
-  {t:"Midnight moonlight",img:"assets/images/art-midnight-moonlight.jpg"},
-  {t:"The Yellow Umbrella",img:"assets/images/art-the-yellow-umbrella.jpg"},
-  {t:"12 AM! Next Episode?",img:"assets/images/art-12am-next-episode.jpg"},
-  {t:"ये रे ये रे पावसा, तुला देते पैसा!",img:"assets/images/art-ye-re-ye-re-pavsa.jpg"},
-  {t:"One Afternoon",img:"assets/images/art-one-afternoon.jpg"},
-  {t:"It's more about the journey than the experience.",img:"assets/images/art-journey-over-experience.jpg"},
-  {t:"Ambling along the streets",img:"assets/images/art-ambling-along-the-streets.jpg"},
+  {t:"Beneath the waves",img:"assets/img-37.jpg"},
+  {t:"Eye on you!",img:"assets/img-38.jpg"},
+  {t:"Midnight moonlight",img:"assets/img-39.jpg"},
+  {t:"The Yellow Umbrella",img:"assets/img-02.jpg"},
+  {t:"12 AM! Next Episode?",img:"assets/img-40.jpg"},
+  {t:"ये रे ये रे पावसा, तुला देते पैसा!",img:"assets/img-41.jpg"},
+  {t:"One Afternoon",img:"assets/img-03.jpg"},
+  {t:"It's more about the journey than the experience.",img:"assets/img-42.jpg"},
+  {t:"Ambling along the streets",img:"assets/img-43.jpg"},
 ];
 
 const TOOLS = [
@@ -48,6 +48,34 @@ const ARROW = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke
 /* ============================================================
    RENDER
    ============================================================ */
+function featuredCard(p,i){
+  const media = p.img
+    ? `<img src="${p.img}" alt="${p.t}" loading="lazy"/>`
+    : `<div class="ph">${PH}<span class="ph-label">Cover</span></div>`;
+  const titleHTML = p.t.replace(/^([^:—]+[:—])/, '<b>$1</b>');
+  const problem = (p.sub!==undefined && p.sub!=='') ? p.sub
+                  : [p.role,p.ind].filter(Boolean).join(' · ');
+  // Role / Domain / Year built only from data that already exists
+  const meta = [];
+  if(p.tags && p.tags.length){
+    meta.push(`<div class="m-item"><span class="m-k">Focus</span><span class="m-v">${p.tags.join(' · ')}</span></div>`);
+  }
+  if(p.year){
+    meta.push(`<div class="m-item"><span class="m-k">Year</span><span class="m-v">${p.year}</span></div>`);
+  }
+  const rev = (i%2===1) ? ' rev' : '';
+  return `<article class="feat reveal${rev}" data-nav="${p.case||'#case'}">
+    <div class="feat-media">${media}</div>
+    <div class="feat-body">
+      <span class="feat-num">${String(i+1).padStart(2,'0')}</span>
+      <h3 class="feat-title">${titleHTML}</h3>
+      ${problem?`<p class="feat-problem">${problem}</p>`:''}
+      ${meta.length?`<div class="feat-meta">${meta.join('')}</div>`:''}
+      <span class="feat-cta">View case study ${ARROW}</span>
+    </div>
+  </article>`;
+}
+
 function projCard(p,i){
   const media = p.img
     ? `<img src="${p.img}" alt="${p.t}" loading="lazy"/>`
@@ -77,10 +105,21 @@ function artCard(a){
   </figure>`;
 }
 
-document.getElementById('featuredGrid').innerHTML = [UX[0],UX[6],UX[1]].map(projCard).join('');
+document.getElementById('featuredGrid').innerHTML = [UX[0],UX[6],UX[1]].map(featuredCard).join('');
 document.getElementById('uxGrid').innerHTML = [UX[0],UX[6],UX[1],UX[4],UX[3],UX[2],UX[5]].map(projCard).join('');
 
 document.getElementById('artGrid').innerHTML = ART.map(artCard).join('');
+{
+  // Compact sketchbook teaser — 3 existing illustrations, uncropped square thumbnails
+  const _skPick = [3,0,8];              // The Yellow Umbrella, Beneath the waves, Ambling along the streets
+  const _skEl = document.getElementById('sktArt');
+  if(_skEl){
+    _skEl.innerHTML = _skPick.map(idx=>{
+      const a = ART[idx]; if(!a) return '';
+      return `<figure><img src="${a.img}" alt="${a.t}" loading="lazy"/></figure>`;
+    }).join('');
+  }
+}
 document.getElementById('toolsGrid').innerHTML = TOOLS.map(([a,n,c])=>
   `<div class="tool card reveal"><div class="tico">${a}</div><div class="tn">${n}</div><div class="tc">${c}</div></div>`).join('');
 {const _sw=document.getElementById('skillsWrap'); if(_sw){ const cl=['sc-a','sc-b','sc-c','sc-d','sc-e']; const big=[0,4,7,10]; _sw.innerHTML = SKILLS.map((s,i)=>`<span class="sc-pill ${cl[i%cl.length]}${big.includes(i)?' sc-big':''}" style="--r:${(i*41)%7-3}deg">${s}</span>`).join(''); }}
@@ -156,6 +195,38 @@ document.addEventListener('click',e=>{
   handleNav(href, scrollTo, tab);
 });
 window.addEventListener('popstate',()=>route(location.hash));
+
+/* ============================================================
+   PROCESS DEEP-DIVE  (progressive disclosure)
+   ============================================================ */
+document.querySelectorAll('[data-ptoggle]').forEach(btn=>{
+  const target = document.getElementById(btn.getAttribute('aria-controls'));
+  const label = btn.querySelector('.pt-label');
+  if(!target) return;
+  const reduce = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  btn.addEventListener('click',()=>{
+    const isOpen = btn.getAttribute('aria-expanded')==='true';
+    if(isOpen){
+      // collapse
+      btn.setAttribute('aria-expanded','false');
+      if(label) label.textContent='Explore the process';
+      target.classList.remove('open');
+      const done=()=>{ target.hidden=true; target.removeEventListener('transitionend',done); };
+      if(reduce){ target.hidden=true; } else { target.addEventListener('transitionend',done); }
+    } else {
+      // expand
+      target.hidden=false;
+      // force reflow so the grid-rows transition runs
+      void target.offsetHeight;
+      target.classList.add('open');
+      btn.setAttribute('aria-expanded','true');
+      if(label) label.textContent='Hide detailed process';
+      // re-run reveal observer on newly shown content
+      if(typeof observeReveals==='function') setTimeout(observeReveals, 40);
+    }
+  });
+});
+
 
 /* ============================================================
    SCROLL REVEAL
